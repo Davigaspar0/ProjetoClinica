@@ -14,7 +14,7 @@ public class Administrador {
     private String nome;
     private String login;
     private String senha;
-    private String senha;
+  
 
     /**
      * @return the id
@@ -75,15 +75,7 @@ public class Administrador {
     /**
      * @return the senha
      */
-    public String getSenha() {
-        return senha;
-    }
-
-    /**
-     * @param senha the senha to set
-     */
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-    
+   
 }
+    
+
