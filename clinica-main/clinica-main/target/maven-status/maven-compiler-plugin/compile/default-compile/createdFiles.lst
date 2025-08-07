@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 view\TelaCadastro$4.class
 view\TelaConsulta$6.class
 view\CadastroPaciente.class
@@ -14,6 +15,11 @@ view\MarcarConsulta$2.class
 view\TelaConsulta$3.class
 view\TelaConsulta$1.class
 view\CadastroPaciente$4.class
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e39470a59c050729098dc5adb5aa8dbad6ce49bb
 DAO\GenericDAO.class
 view\CadastroPaciente$2.class
 view\CadastroPaciente$7.class
@@ -32,4 +38,9 @@ DAO\PacienteDAO.class
 DAO\MedicosDAO.class
 view\CadastroPaciente$3.class
 view\TelaConsulta$2.class
+<<<<<<< HEAD
 view\MarcarConsulta$1.class
+=======
+>>>>>>> 2891c02bfdf702833c11164af1b10db49a4787bd
+>>>>>>> 6908d0623b3c8d07413703ddf1dc881a3c8bd1bd
+>>>>>>> e39470a59c050729098dc5adb5aa8dbad6ce49bb
