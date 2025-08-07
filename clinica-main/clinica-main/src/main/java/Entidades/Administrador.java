@@ -14,11 +14,6 @@ public class Administrador {
     private String nome;
     private String login;
     private String senha;
-<<<<<<< HEAD
-   
-=======
-  
->>>>>>> 2891c02bfdf702833c11164af1b10db49a4787bd
 
     /**
      * @return the id
@@ -75,14 +70,9 @@ public class Administrador {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
+}
     /**
      * @return the senha
      */
-<<<<<<< HEAD
-=======
-   
->>>>>>> 2891c02bfdf702833c11164af1b10db49a4787bd
-}
-    
+
 
