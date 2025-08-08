@@ -13,20 +13,9 @@ public class Administrador {
     private int id;
     private String nome;
     private String login;
-<<<<<<< HEAD
     private String Senha;
-    private String senha;
-=======
-    private String senha;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-   
-=======
-  
->>>>>>> 2891c02bfdf702833c11164af1b10db49a4787bd
->>>>>>> 6908d0623b3c8d07413703ddf1dc881a3c8bd1bd
->>>>>>> e39470a59c050729098dc5adb5aa8dbad6ce49bb
+    
+
 
     /**
      * @return the id
@@ -74,14 +63,14 @@ public class Administrador {
      * @return the senha
      */
     public String getSenha() {
-        return senha;
+        return Senha;
     }
 
     /**
      * @param senha the senha to set
      */
     public void setSenha(String senha) {
-        this.senha = senha;
+        this.Senha = senha;
     }
 }
     /**
