@@ -11,10 +11,12 @@ view\TelaConsulta$4.class
 view\TelaCadastro$1.class
 view\TelaCadastro.class
 view\MarcarConsulta$2.class
+view\TelaCadastro$7.class
 view\TelaIniciall$2.class
 view\CMedico.class
 view\TelaConsulta$3.class
 view\TelaConsulta$1.class
+view\TelaCadastro$9.class
 view\CadastroPaciente$4.class
 DAO\GenericDAO.class
 view\TelaIniciall.class
@@ -34,7 +36,10 @@ view\CadastroPaciente$5.class
 view\MarcarConsulta.class
 DAO\PacienteDAO.class
 view\TelaIniciall$1.class
+DAO\SecretariaDAO.class
 DAO\MedicosDAO.class
+Entidades\Secretaria.class
 view\CadastroPaciente$3.class
 view\TelaConsulta$2.class
 view\MarcarConsulta$1.class
+view\TelaCadastro$8.class
