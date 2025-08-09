@@ -21,8 +21,10 @@ view\CadastroPaciente$4.class
 DAO\GenericDAO.class
 view\TelaIniciall.class
 view\CadastroPaciente$2.class
+view\TelaCadastro$10.class
 view\CadastroPaciente$7.class
 view\TelaConsulta$5.class
+view\TelaIniciall$4.class
 Entidades\Administrador.class
 view\TelaCadastro$3.class
 view\TelaConsulta.class

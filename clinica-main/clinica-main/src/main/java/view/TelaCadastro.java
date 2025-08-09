@@ -67,6 +67,11 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("HOME");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Cadastro de Secretário(a)");
@@ -252,7 +257,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(txtSENHA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BotãoLimparCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotãoLimparCampo)
                     .addComponent(BotãoCadastarSecretário))
                 .addGap(45, 45, 45)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -277,7 +282,14 @@ public class TelaCadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotãoLimparCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotãoLimparCampoActionPerformed
-        // TODO add your handling code here:
+       
+      txtNOME.setText("");
+      txtCPF.setText("");
+      txtENDEREÇO.setText("");
+      txtSENHA.setText("");
+      txtSEXO.setText("");
+      
+       
     }//GEN-LAST:event_BotãoLimparCampoActionPerformed
 
     private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
@@ -299,7 +311,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     private void BotãoCadastarSecretárioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotãoCadastarSecretárioActionPerformed
        String Nome,Cpf,Sexo,Endereço,Senha;
        
-       Nome = txtNOME.getText();
+       Nome = txtNOME.getText(); //davi
        Cpf = txtCPF.getText();
        Sexo = txtSEXO.getText();
        Endereço = txtENDEREÇO.getText();
@@ -307,7 +319,7 @@ public class TelaCadastro extends javax.swing.JFrame {
        
        Secretaria objsecretaria = new Secretaria();
        
-       objsecretaria.setNome_secretaria(Nome);
+       objsecretaria.setNome_secretaria(Nome); //davi
        objsecretaria.setCpf(Cpf);
        objsecretaria.setSexo(Sexo);
        objsecretaria.setEndereco(Endereço);
@@ -335,6 +347,12 @@ public class TelaCadastro extends javax.swing.JFrame {
     private void txtSENHAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSENHAActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSENHAActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         TelaIniciall cad = new TelaIniciall();
+                cad.setVisible(true);
+                dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
