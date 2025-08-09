@@ -4,6 +4,13 @@
  */
 package view;
 
+import DAO.MedicosDAO;
+import Entidades.Medicos;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LEI
@@ -30,31 +37,31 @@ public class CMedico extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        txtID = new javax.swing.JTextPane();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane2 = new javax.swing.JTextPane();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
+        txtNOME = new javax.swing.JTextPane();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
+        txtCPF = new javax.swing.JTextPane();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        txtRG = new javax.swing.JTextPane();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
+        txtSEXO = new javax.swing.JTextPane();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextPane7 = new javax.swing.JTextPane();
+        txtTELEFONE = new javax.swing.JTextPane();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextPane8 = new javax.swing.JTextPane();
+        txtENDEREÇO = new javax.swing.JTextPane();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jTextPane9 = new javax.swing.JTextPane();
+        txtSENHA = new javax.swing.JTextPane();
         jButton1 = new javax.swing.JButton();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -74,7 +81,7 @@ public class CMedico extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel5.setText("ID:");
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(txtID);
 
         jLabel6.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel6.setText("CRM:");
@@ -84,37 +91,37 @@ public class CMedico extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel7.setText("Nome:");
 
-        jScrollPane3.setViewportView(jTextPane3);
+        jScrollPane3.setViewportView(txtNOME);
 
         jLabel8.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel8.setText("CPF:");
 
-        jScrollPane4.setViewportView(jTextPane4);
+        jScrollPane4.setViewportView(txtCPF);
 
         jLabel9.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel9.setText("RG:");
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(txtRG);
 
         jLabel10.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel10.setText("Sexo:");
 
-        jScrollPane6.setViewportView(jTextPane6);
+        jScrollPane6.setViewportView(txtSEXO);
 
         jLabel11.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel11.setText("Telefone:");
 
-        jScrollPane7.setViewportView(jTextPane7);
+        jScrollPane7.setViewportView(txtTELEFONE);
 
         jLabel12.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel12.setText("Endereço:");
 
-        jScrollPane8.setViewportView(jTextPane8);
+        jScrollPane8.setViewportView(txtENDEREÇO);
 
         jLabel13.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jLabel13.setText("Senha de Acesso:");
 
-        jScrollPane9.setViewportView(jTextPane9);
+        jScrollPane9.setViewportView(txtSENHA);
 
         jButton1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jButton1.setText("Limpar Campos");
@@ -125,6 +132,11 @@ public class CMedico extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jButton2.setText("Salvar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         jButton3.setText("Consultar");
@@ -262,8 +274,41 @@ public class CMedico extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+String Nome,Cpf,Sexo,Endereço,Senha;
+       
+       Nome = txtNOME.getText();
+       Cpf = txtCPF.getText();
+       Sexo = txtSEXO.getText();
+       Endereço = txtENDEREÇO.getText();
+       Senha = txtSENHA.getText();
+       
+       CMedico objsMedico = new CMedico();
+       
+       objsMedico.setNome_medico(Nome);
+       objsMedico.setCpf(Cpf);
+       objsMedico.setSexo(Sexo);
+       objsMedico.setEndereco(Endereço);
+       objsMedico.setSenha(Senha);
+       
+       
+       MedicosDAO objMedicosDAO = new MedicosDAO();
+       
+       try {
+           
+           objMedicosDAO.addMedicos(objsMedico);
+           
+           JOptionPane.showMessageDialog(null, "Salvo com sucesso");
+       } catch (SQLException ex) {
+           Logger.getLogger(CMedico.class.getName()).log(Level.SEVERE, null, ex);
+
+       }    }//GEN-LAST:event_jButton2ActionPerformed
+
+    
     /**
      * @param args the command line arguments
+     * 
+     * 
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -325,14 +370,34 @@ public class CMedico extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
-    private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
-    private javax.swing.JTextPane jTextPane7;
-    private javax.swing.JTextPane jTextPane8;
-    private javax.swing.JTextPane jTextPane9;
+    private javax.swing.JTextPane txtCPF;
+    private javax.swing.JTextPane txtENDEREÇO;
+    private javax.swing.JTextPane txtID;
+    private javax.swing.JTextPane txtNOME;
+    private javax.swing.JTextPane txtRG;
+    private javax.swing.JTextPane txtSENHA;
+    private javax.swing.JTextPane txtSEXO;
+    private javax.swing.JTextPane txtTELEFONE;
     // End of variables declaration//GEN-END:variables
+
+    private void setNome_medico(String Nome) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void setCpf(String Cpf) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void setSexo(String Sexo) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void setEndereco(String Endereço) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void setSenha(String Senha) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
