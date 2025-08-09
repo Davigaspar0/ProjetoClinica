@@ -65,7 +65,7 @@ public class CMedico extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
+        BotaoSalvar = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -130,11 +130,11 @@ public class CMedico extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane10.setViewportView(jTextArea1);
 
-        jButton2.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-        jButton2.setText("Salvar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BotaoSalvar.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        BotaoSalvar.setText("Salvar");
+        BotaoSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BotaoSalvarActionPerformed(evt);
             }
         });
 
@@ -203,7 +203,7 @@ public class CMedico extends javax.swing.JFrame {
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jButton2)
+                                    .addComponent(BotaoSalvar)
                                     .addGap(36, 36, 36)
                                     .addComponent(jButton3)
                                     .addGap(40, 40, 40)
@@ -264,7 +264,7 @@ public class CMedico extends javax.swing.JFrame {
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(BotaoSalvar)
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
@@ -274,7 +274,7 @@ public class CMedico extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BotaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSalvarActionPerformed
 String Nome,Cpf,Sexo,Endereço,Senha;
        
        Nome = txtNOME.getText();
@@ -302,7 +302,7 @@ String Nome,Cpf,Sexo,Endereço,Senha;
        } catch (SQLException ex) {
            Logger.getLogger(CMedico.class.getName()).log(Level.SEVERE, null, ex);
 
-       }    }//GEN-LAST:event_jButton2ActionPerformed
+       }       }    }//GEN-LAST:event_BotaoSalvarActionPerformed
 
     
     /**
@@ -343,8 +343,8 @@ String Nome,Cpf,Sexo,Endereço,Senha;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoSalvar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
