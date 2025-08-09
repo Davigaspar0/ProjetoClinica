@@ -26,6 +26,7 @@ view\CadastroPaciente$7.class
 view\TelaConsulta$5.class
 view\TelaIniciall$4.class
 Entidades\Administrador.class
+view\CadastroPaciente$9.class
 view\TelaCadastro$3.class
 view\TelaConsulta.class
 Entidades\Consultas.class
@@ -45,3 +46,4 @@ view\CadastroPaciente$3.class
 view\TelaConsulta$2.class
 view\MarcarConsulta$1.class
 view\TelaCadastro$8.class
+view\CadastroPaciente$8.class

@@ -20,7 +20,7 @@ public class PacienteDAO extends GenericDAO{
         try (ResultSet rs = executeQuery("SELECT * FROM paciente ")) {
             while(rs.next())
             {
-                paciente.add(populatePaciente(rs));
+                paciente.add(populatePaciente());
             }
         }
         return paciente;
@@ -34,7 +34,7 @@ public class PacienteDAO extends GenericDAO{
                 ResultSet rs = executeQuery("SELECT * FROM paciente WHERE nome like ?",nome+"%")) {
             while(rs.next())
             {
-                paciente.add(populatePaciente(rs));
+                paciente.add(populatePaciente());
             }
         }
         return paciente;
@@ -48,13 +48,13 @@ public class PacienteDAO extends GenericDAO{
                 ResultSet rs = executeQuery("SELECT * FROM paciente WHERE cpf like ?",cpf+"%")) {
             while(rs.next())
             {
-                paciente.add(populatePaciente(rs));
+                paciente.add(populatePaciente());
             }
         }
         return paciente;
     }
     
-    public Integer addPaciente(Paciente paciente) throws SQLException
+    public Integer Paciente(Paciente paciente) throws SQLException
     {
         String query = "INSERT INTO paciente(nome, telefone, cpf, rg, endereco, sexo, convenio) VALUES (?,?,?,?,?,?,?)";
         executeComand(query,  paciente.getNome(), paciente.getTelefone(), paciente.getCpf(), paciente.getRg(), paciente.getEndereco(), paciente.getSexo(), paciente.getConvenio());        
@@ -76,7 +76,7 @@ public class PacienteDAO extends GenericDAO{
         
     }
     
-        private Paciente populatePaciente(ResultSet rs) throws SQLException {
+        private Paciente populatePaciente() throws SQLException {
         Paciente retorno = new Paciente();
         
         retorno.setId(Integer.valueOf(rs.getString("id")));
@@ -93,5 +93,6 @@ public class PacienteDAO extends GenericDAO{
         
     }
     
-    
+
+        
 }
