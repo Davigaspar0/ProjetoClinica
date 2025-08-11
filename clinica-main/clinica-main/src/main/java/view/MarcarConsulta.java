@@ -4,6 +4,9 @@
  */
 package view;
 
+import DAO.MedicosDAO;
+import Entidades.Medicos;
+
 /**
  *
  * @author Felip
@@ -35,17 +38,17 @@ public class MarcarConsulta extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jToggleButton9 = new javax.swing.JToggleButton();
+        ButBuscarConsulta = new javax.swing.JToggleButton();
+        ButMarcarConsulta = new javax.swing.JToggleButton();
+        txtCrmMedico = new javax.swing.JTextField();
+        txtCpfCliente = new javax.swing.JTextField();
+        txtIdMedico = new javax.swing.JTextField();
+        txtNomeMedico = new javax.swing.JTextField();
+        txtIdPaciente = new javax.swing.JTextField();
+        txtNomePaciente = new javax.swing.JTextField();
+        txtData = new javax.swing.JTextField();
+        txtHora = new javax.swing.JTextField();
+        ButBuscarMedico = new javax.swing.JToggleButton();
         jToggleButton10 = new javax.swing.JToggleButton();
         jLabel11 = new javax.swing.JLabel();
 
@@ -87,40 +90,71 @@ public class MarcarConsulta extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Hora");
 
-        jToggleButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jToggleButton1.setText("Buscar Consultas");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButBuscarConsulta.setForeground(new java.awt.Color(0, 0, 0));
+        ButBuscarConsulta.setText("Buscar Consultas");
+        ButBuscarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                ButBuscarConsultaActionPerformed(evt);
             }
         });
 
-        jToggleButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jToggleButton2.setText("Marcar Consulta");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        ButMarcarConsulta.setForeground(new java.awt.Color(0, 0, 0));
+        ButMarcarConsulta.setText("Marcar Consulta");
+        ButMarcarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                ButMarcarConsultaActionPerformed(evt);
             }
         });
 
-        jTextField1.setText("jTextField1");
+        txtCrmMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCrmMedicoActionPerformed(evt);
+            }
+        });
 
-        jTextField2.setText("jTextField2");
+        txtCpfCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCpfClienteActionPerformed(evt);
+            }
+        });
 
-        jTextField3.setText("jTextField3");
+        txtNomeMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeMedicoActionPerformed(evt);
+            }
+        });
 
-        jTextField4.setText("jTextField4");
+        txtIdPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdPacienteActionPerformed(evt);
+            }
+        });
 
-        jTextField5.setText("jTextField5");
+        txtNomePaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomePacienteActionPerformed(evt);
+            }
+        });
 
-        jTextField6.setText("jTextField6");
+        txtData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDataActionPerformed(evt);
+            }
+        });
 
-        jTextField7.setText("jTextField7");
+        txtHora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHoraActionPerformed(evt);
+            }
+        });
 
-        jTextField8.setText("jTextField8");
-
-        jToggleButton9.setForeground(new java.awt.Color(0, 0, 0));
-        jToggleButton9.setText("Buscar Médico");
+        ButBuscarMedico.setForeground(new java.awt.Color(0, 0, 0));
+        ButBuscarMedico.setText("Buscar Médico");
+        ButBuscarMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButBuscarMedicoActionPerformed(evt);
+            }
+        });
 
         jToggleButton10.setForeground(new java.awt.Color(0, 0, 0));
         jToggleButton10.setText("Buscar Paciente");
@@ -145,28 +179,28 @@ public class MarcarConsulta extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(13, 13, 13)
-                                        .addComponent(jToggleButton1))
+                                        .addComponent(ButBuscarConsulta))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jToggleButton2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(ButMarcarConsulta, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                    .addComponent(txtIdPaciente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                    .addComponent(txtIdMedico, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
                                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel7)
-                                    .addComponent(jTextField4)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtNomeMedico)
+                                    .addComponent(txtNomePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 38, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -174,11 +208,11 @@ public class MarcarConsulta extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2))
+                            .addComponent(txtCrmMedico)
+                            .addComponent(txtCpfCliente))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jToggleButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ButBuscarMedico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jToggleButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
                         .addGap(38, 38, 38))))
             .addGroup(layout.createSequentialGroup()
@@ -201,12 +235,12 @@ public class MarcarConsulta extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton9))
+                    .addComponent(txtCrmMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButBuscarMedico))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCpfCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -214,8 +248,8 @@ public class MarcarConsulta extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNomeMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -224,32 +258,74 @@ public class MarcarConsulta extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtIdPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNomePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8)))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel9)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jToggleButton2))
+                    .addComponent(ButBuscarConsulta)
+                    .addComponent(ButMarcarConsulta))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void ButBuscarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButBuscarConsultaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_ButBuscarConsultaActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void ButMarcarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButMarcarConsultaActionPerformed
         
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_ButMarcarConsultaActionPerformed
+
+    private void ButBuscarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButBuscarMedicoActionPerformed
+        String CRM;
+        CRM = txtCrmMedico.getText();
+        int crm = Integer.parseInt(CRM);
+        
+        MedicosDAO objsecretariaDAO = new MedicosDAO();
+        
+        
+       
+       
+       
+     
+    }//GEN-LAST:event_ButBuscarMedicoActionPerformed
+
+    private void txtCrmMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCrmMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCrmMedicoActionPerformed
+
+    private void txtCpfClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCpfClienteActionPerformed
+
+    private void txtNomeMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeMedicoActionPerformed
+
+    private void txtIdPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdPacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdPacienteActionPerformed
+
+    private void txtDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDataActionPerformed
+
+    private void txtHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHoraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraActionPerformed
+
+    private void txtNomePacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomePacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomePacienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,6 +363,9 @@ public class MarcarConsulta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton ButBuscarConsulta;
+    private javax.swing.JToggleButton ButBuscarMedico;
+    private javax.swing.JToggleButton ButMarcarConsulta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
@@ -297,17 +376,14 @@ public class MarcarConsulta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton10;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton9;
+    private javax.swing.JTextField txtCpfCliente;
+    private javax.swing.JTextField txtCrmMedico;
+    private javax.swing.JTextField txtData;
+    private javax.swing.JTextField txtHora;
+    private javax.swing.JTextField txtIdMedico;
+    private javax.swing.JTextField txtIdPaciente;
+    private javax.swing.JTextField txtNomeMedico;
+    private javax.swing.JTextField txtNomePaciente;
     // End of variables declaration//GEN-END:variables
 }

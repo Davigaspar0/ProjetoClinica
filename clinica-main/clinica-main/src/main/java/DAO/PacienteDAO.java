@@ -76,17 +76,17 @@ public class PacienteDAO extends GenericDAO{
         
     }
     
-        private Paciente populatePaciente() throws SQLException {
+        public Paciente populatePaciente() throws SQLException {
         Paciente retorno = new Paciente();
         
-        retorno.setId(Integer.valueOf(rs.getString("id")));
-        retorno.setNome(rs.getString("nome"));
-        retorno.setTelefone(rs.getString("telefone"));
-        retorno.setCpf(rs.getString("cpf"));
-        retorno.setRg(rs.getString("rg"));
-        retorno.setEndereco(rs.getString("endereco"));
-        retorno.setSexo(rs.getString("sexo"));
-        retorno.setConvenio(rs.getString("convenio"));
+        //retorno.setId(Integer.valueOf(rs.getString("id")));
+        //retorno.setNome(rs.getString("nome"));
+        //retorno.setTelefone(rs.getString("telefone"));
+        //retorno.setCpf(rs.getString("cpf"));
+        //retorno.setRg(rs.getString("rg"));
+       // retorno.setEndereco(rs.getString("endereco"));
+        //retorno.setSexo(rs.getString("sexo"));
+        //retorno.setConvenio(rs.getString("convenio"));
         
         
         return retorno;
