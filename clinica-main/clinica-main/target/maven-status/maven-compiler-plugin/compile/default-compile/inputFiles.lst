@@ -6,6 +6,7 @@ C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-ma
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\TelaCadastroSecretaria.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\Entidades\Administrador.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\Entidades\Secretaria.java
+C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\CadastrarMedicos.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\TelaLoginSecretaria.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\MENUsecretaria.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\DAO\MedicosDAO.java
@@ -14,3 +15,6 @@ C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-ma
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\DAO\GenericDAO.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\Entidades\Consultas.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\Entidades\Medicos.java
+C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\BuscarMedicos.java
+C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\BuscarPacientes.java
+C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\CadastrarPacientes.java

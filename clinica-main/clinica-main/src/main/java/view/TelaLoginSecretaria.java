@@ -149,6 +149,7 @@ public class TelaLoginSecretaria extends javax.swing.JFrame {
         
         if (nome.equals("") && senha.equals("")){
             JOptionPane.showMessageDialog(null, "Preencha os campos!");
+            return;
         }
         
          Secretaria objsecretariaLogin = new Secretaria();

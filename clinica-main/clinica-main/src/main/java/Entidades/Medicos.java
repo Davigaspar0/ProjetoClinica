@@ -17,6 +17,7 @@ public class Medicos {
     private String telefone;
     private String sexo;
     private String endereco;
+    private String senha_de_acesso;
     
     public Medicos() {
     }
@@ -88,6 +89,20 @@ public class Medicos {
         @Override
     public String toString() {
         return nome_medico;
+    }
+
+    /**
+     * @return the senha_de_acesso
+     */
+    public String getSenha_de_acesso() {
+        return senha_de_acesso;
+    }
+
+    /**
+     * @param senha_de_acesso the senha_de_acesso to set
+     */
+    public void setSenha_de_acesso(String senha_de_acesso) {
+        this.senha_de_acesso = senha_de_acesso;
     }
     
 }
