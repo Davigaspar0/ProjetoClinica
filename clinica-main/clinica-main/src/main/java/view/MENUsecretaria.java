@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author davio
@@ -181,7 +183,9 @@ public class MENUsecretaria extends javax.swing.JFrame {
     }//GEN-LAST:event_CadMedActionPerformed
 
     private void BuscarPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarPacActionPerformed
-       
+       BuscarPacientes cad = new BuscarPacientes();
+        cad.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BuscarPacActionPerformed
 
     private void MarcarConsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarcarConsActionPerformed
@@ -220,7 +224,7 @@ public class MENUsecretaria extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MENUsecretaria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+           
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

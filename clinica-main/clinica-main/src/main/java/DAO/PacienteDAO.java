@@ -20,27 +20,36 @@ public class PacienteDAO extends GenericDAO{
         try (ResultSet rs = executeQuery("SELECT * FROM paciente ")) {
             while(rs.next())
             {
-                paciente.add(populatePaciente());
+                
             }
         }
         return paciente;
     }
     
-    public List<Paciente> getAllPacientePorNome(Paciente nome) throws SQLException 
-    {
-        List<Paciente> paciente = new LinkedList<>();
-        
-        try ( //ResultSet rs = executeQuery("SELECT * FROM medicos WHERE nome_medico like ?", "%"+nome);
-                ResultSet rs = executeQuery("SELECT * FROM paciente WHERE nome like ?",nome+"%")) {
-            while(rs.next())
-            {
-                paciente.add(populatePaciente());
-            }
+   public List<Paciente> getAllPacientePorNome(Paciente nome) throws SQLException {
+    List<Paciente> pacientes = new LinkedList<>();
+
+    try (ResultSet rs = executeQuery("SELECT * FROM paciente WHERE nome LIKE ?", nome.getNome() + "%")) {
+        while (rs.next()) {
+            Paciente pac = new Paciente();
+            pac.setId(rs.getInt("id"));
+            pac.setNome(rs.getString("nome"));
+            pac.setEndereco(rs.getString("endereco"));
+            pac.setCpf(rs.getString("cpf"));
+            pac.setRg(rs.getString("rg"));
+            pac.setSexo(rs.getString("sexo"));
+            pac.setConvenio(rs.getString("convenio"));
+            pac.setTelefone(rs.getString("telefone"));
+
+            pacientes.add(pac); // ← ESSENCIAL
         }
-        return paciente;
+    }
+
+    return pacientes;
+
     }
     
-    public List<Paciente> getAllPacientesPorCpf(String cpf) throws SQLException 
+    public List<Paciente> getAllPacientesPorCpf(Paciente cpf) throws SQLException 
     {
         List<Paciente> paciente = new LinkedList<>();
         
@@ -48,9 +57,21 @@ public class PacienteDAO extends GenericDAO{
                 ResultSet rs = executeQuery("SELECT * FROM paciente WHERE cpf like ?",cpf+"%")) {
             while(rs.next())
             {
-                paciente.add(populatePaciente());
-            }
+            Paciente pac2 = new Paciente();
+            pac2.setId(rs.getInt("id"));
+            pac2.setNome(rs.getString("nome"));
+            pac2.setEndereco(rs.getString("endereco"));
+            pac2.setCpf(rs.getString("cpf"));
+            pac2.setRg(rs.getString("rg"));
+            pac2.setSexo(rs.getString("sexo"));
+            pac2.setConvenio(rs.getString("convenio"));
+            pac2.setTelefone(rs.getString("telefone"));
+
+            paciente.add(pac2); 
         }
+    }    
+            
+        
         return paciente;
     }
     
@@ -62,37 +83,23 @@ public class PacienteDAO extends GenericDAO{
         
     }
     
-    public void updatePaciente(Paciente paciente) throws SQLException
+    public void editarPaciente(Paciente paciente) throws SQLException
     {
         String query = "UPDATE paciente SET nome = ?, telefone = ?, cpf = ?, rg = ?, endereco = ?, sexo = ?, convenio = ? WHERE id =?";
         executeComand(query,  paciente.getNome(), paciente.getTelefone(), paciente.getCpf(), paciente.getRg(), paciente.getEndereco(), paciente.getSexo(), paciente.getConvenio(), paciente.getId());        
         
     }
     
-    public void deletePaciente(Paciente paciente) throws SQLException{
-        String query = "DELETE FROM paciente WHERE id = ? ";
-        executeComand(query, paciente.getId());
+    public void excluirPaciente(Paciente paciente) throws SQLException{
+        String query = "DELETE FROM paciente WHERE nome = ? OR cpf = ? ";
+        executeComand(query, paciente.getNome(), paciente.getCpf());
         
         
     }
     
-        public Paciente populatePaciente() throws SQLException {
-        Paciente retorno = new Paciente();
-        
-        //retorno.setId(Integer.valueOf(rs.getString("id")));
-        //retorno.setNome(rs.getString("nome"));
-        //retorno.setTelefone(rs.getString("telefone"));
-        //retorno.setCpf(rs.getString("cpf"));
-        //retorno.setRg(rs.getString("rg"));
-       // retorno.setEndereco(rs.getString("endereco"));
-        //retorno.setSexo(rs.getString("sexo"));
-        //retorno.setConvenio(rs.getString("convenio"));
-        
-        
-        return retorno;
         
     }
     
 
         
-}
+

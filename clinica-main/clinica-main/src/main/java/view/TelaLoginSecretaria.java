@@ -42,6 +42,7 @@ public class TelaLoginSecretaria extends javax.swing.JFrame {
         txtSenhaSec = new javax.swing.JTextField();
         btnEntrar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        btnVoltarMenu = new javax.swing.JButton();
 
         jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
         jLabel9.setText("DFR - Clínica");
@@ -74,6 +75,14 @@ public class TelaLoginSecretaria extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe Script", 0, 18)); // NOI18N
         jLabel3.setText("Bem vinda outra vez Secretario (a)");
 
+        btnVoltarMenu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnVoltarMenu.setText("VOLTAR");
+        btnVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarMenuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -91,19 +100,26 @@ public class TelaLoginSecretaria extends javax.swing.JFrame {
                         .addGap(85, 85, 85)
                         .addComponent(jLabel3))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(124, 124, 124)
+                        .addContainerGap()
+                        .addComponent(btnVoltarMenu)
+                        .addGap(41, 41, 41)
                         .addComponent(jLabel11)))
                 .addContainerGap(103, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(79, 79, 79))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel11)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel11))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnVoltarMenu)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addGap(40, 40, 40)
@@ -114,9 +130,9 @@ public class TelaLoginSecretaria extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSenhaSec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGap(66, 66, 66)
                 .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
+                .addGap(105, 105, 105))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -180,6 +196,12 @@ public class TelaLoginSecretaria extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEntrarActionPerformed
 
+    private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
+        TelaIniciall cad = new TelaIniciall();
+        cad.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarMenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -217,6 +239,7 @@ public class TelaLoginSecretaria extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
+    private javax.swing.JButton btnVoltarMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
