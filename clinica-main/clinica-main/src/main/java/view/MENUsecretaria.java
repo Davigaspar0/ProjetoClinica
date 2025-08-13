@@ -29,11 +29,12 @@ public class MENUsecretaria extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         CadMed = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        CadPaci = new javax.swing.JButton();
+        BuscarMedicos = new javax.swing.JButton();
+        BuscarPac = new javax.swing.JButton();
+        MarcarCons = new javax.swing.JButton();
+        BuscarConsu = new javax.swing.JButton();
+        BtnSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,38 +48,46 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("CADASTRAR PACIENTES");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        CadPaci.setText("CADASTRAR PACIENTES");
+        CadPaci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                CadPaciActionPerformed(evt);
             }
         });
 
-        jButton3.setText("BUSCAR MÉDICOS");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BuscarMedicos.setText("BUSCAR MÉDICOS");
+        BuscarMedicos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BuscarMedicosActionPerformed(evt);
             }
         });
 
-        jButton4.setText("BUSCAR PACIENTES");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BuscarPac.setText("BUSCAR PACIENTES");
+        BuscarPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BuscarPacActionPerformed(evt);
             }
         });
 
-        jButton5.setText("MARCAR CONSULTA");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        MarcarCons.setText("MARCAR CONSULTA");
+        MarcarCons.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                MarcarConsActionPerformed(evt);
             }
         });
 
-        jButton6.setText("BUSCAR CONSULTA");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        BuscarConsu.setText("BUSCAR CONSULTA");
+        BuscarConsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                BuscarConsuActionPerformed(evt);
+            }
+        });
+
+        BtnSair.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnSair.setText("SAIR");
+        BtnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSairActionPerformed(evt);
             }
         });
 
@@ -91,20 +100,25 @@ public class MENUsecretaria extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2)
+                            .addComponent(CadPaci)
                             .addComponent(CadMed))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3)
+                            .addComponent(BuscarMedicos)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton6)
+                                .addComponent(BuscarConsu)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton4)
-                                    .addComponent(jButton5))))
+                                    .addComponent(BuscarPac)
+                                    .addComponent(MarcarCons))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
-                        .addComponent(jLabel9)
-                        .addGap(37, 37, 37))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(37, 37, 37))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(BtnSair)
+                                .addGap(15, 15, 15))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,19 +126,24 @@ public class MENUsecretaria extends javax.swing.JFrame {
                 .addGap(42, 42, 42)
                 .addComponent(CadMed)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(CadPaci)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(BuscarMedicos)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4))
+                        .addComponent(BuscarPac))
                     .addComponent(jLabel9))
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
-                .addGap(18, 18, 18)
-                .addComponent(jButton6)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addComponent(MarcarCons)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(BuscarConsu))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(BtnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -141,17 +160,19 @@ public class MENUsecretaria extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void CadPaciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadPaciActionPerformed
+          CadastrarPacientes cad = new CadastrarPacientes();
+        cad.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_CadPaciActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BuscarMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarMedicosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BuscarMedicosActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void BuscarConsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarConsuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_BuscarConsuActionPerformed
 
     private void CadMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadMedActionPerformed
        CadastrarMedicos cad = new CadastrarMedicos();
@@ -159,13 +180,19 @@ public class MENUsecretaria extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_CadMedActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BuscarPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarPacActionPerformed
        
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_BuscarPacActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void MarcarConsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarcarConsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_MarcarConsActionPerformed
+
+    private void BtnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSairActionPerformed
+        TelaIniciall cad = new TelaIniciall();
+        cad.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_BtnSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,12 +230,13 @@ public class MENUsecretaria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnSair;
+    private javax.swing.JButton BuscarConsu;
+    private javax.swing.JButton BuscarMedicos;
+    private javax.swing.JButton BuscarPac;
     private javax.swing.JButton CadMed;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton CadPaci;
+    private javax.swing.JButton MarcarCons;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

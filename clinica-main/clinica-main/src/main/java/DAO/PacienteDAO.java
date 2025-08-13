@@ -26,7 +26,7 @@ public class PacienteDAO extends GenericDAO{
         return paciente;
     }
     
-    public List<Paciente> getAllPacientePorNome(String nome) throws SQLException 
+    public List<Paciente> getAllPacientePorNome(Paciente nome) throws SQLException 
     {
         List<Paciente> paciente = new LinkedList<>();
         
@@ -54,7 +54,7 @@ public class PacienteDAO extends GenericDAO{
         return paciente;
     }
     
-    public Integer Paciente(Paciente paciente) throws SQLException
+    public Integer addPaciente(Paciente paciente) throws SQLException
     {
         String query = "INSERT INTO paciente(nome, telefone, cpf, rg, endereco, sexo, convenio) VALUES (?,?,?,?,?,?,?)";
         executeComand(query,  paciente.getNome(), paciente.getTelefone(), paciente.getCpf(), paciente.getRg(), paciente.getEndereco(), paciente.getSexo(), paciente.getConvenio());        

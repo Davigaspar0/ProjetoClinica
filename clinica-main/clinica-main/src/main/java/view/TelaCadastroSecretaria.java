@@ -283,6 +283,10 @@ public class TelaCadastroSecretaria extends javax.swing.JFrame {
     private void BotãoCadastarSecretárioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotãoCadastarSecretárioActionPerformed
        String Nome,Cpf,Sexo,Endereço,Senha;
        
+      if (txtNOME.equals("") || txtSENHA.equals("") || txtCPF.equals("") || txtENDEREÇO.equals("") || txtSEXO.equals("")){
+            JOptionPane.showMessageDialog(null, "Preencha os campos!");
+            return;
+       }
        Nome = txtNOME.getText(); //davi
        Cpf = txtCPF.getText();
        Sexo = txtSEXO.getText();
@@ -308,7 +312,7 @@ public class TelaCadastroSecretaria extends javax.swing.JFrame {
            Logger.getLogger(TelaCadastroSecretaria.class.getName()).log(Level.SEVERE, null, ex);
 
        }
-       
+     
        
     }//GEN-LAST:event_BotãoCadastarSecretárioActionPerformed
 
