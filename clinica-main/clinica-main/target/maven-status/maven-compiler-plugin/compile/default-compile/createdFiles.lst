@@ -1,6 +1,5 @@
 view\CadastrarPacientes$7.class
 view\MENUsecretaria$6.class
-view\CadastrarMedicos$1.class
 DAO\ConsultasDAO.class
 view\BuscarConsulta.class
 view\BuscarPacientes$2.class
@@ -11,7 +10,6 @@ view\TelaEditarPacientes$2.class
 view\CadastrarPacientes$4.class
 view\MarcarConsulta$8.class
 view\TelaLoginSecretaria$3.class
-view\CadastrarMedicos$4.class
 view\TelaIniciall$2.class
 view\MENUsecretaria$3.class
 view\MarcarConsulta$7.class
@@ -19,6 +17,7 @@ view\TelaEditarPacientes.class
 view\BuscarPacientes.class
 view\BuscarConsulta$2.class
 view\TelaCadastroSecretaria$9.class
+view\CadastrarMedico.class
 view\CadastrarPacientes$1.class
 view\MarcarConsulta$5.class
 view\TelaCadastroSecretaria$8.class
@@ -35,7 +34,7 @@ Entidades\Paciente.class
 view\TelaCadastroSecretaria$5.class
 view\MarcarConsulta.class
 DAO\PacienteDAO.class
-view\CadastrarMedicos$3.class
+view\CadastrarMedico$1.class
 view\TelaIniciall$1.class
 view\TelaLoginSecretaria.class
 DAO\SecretariaDAO.class
@@ -60,6 +59,7 @@ view\MENUsecretaria$8.class
 view\MarcarConsulta$10.class
 view\MENUsecretaria$1.class
 view\BuscarConsulta$4.class
+view\CadastrarMedico$2.class
 view\CadastrarPacientes$2.class
 view\TelaCadastroSecretaria$4.class
 view\BuscarMedicos$4.class
@@ -71,7 +71,6 @@ view\BuscarMedicos.class
 Entidades\Consultas.class
 view\CadastrarPacientes$6.class
 view\TelaCadastroSecretaria$3.class
-view\CadastrarMedicos$2.class
 view\MarcarConsulta$3.class
 view\TelaCadastroSecretaria$6.class
 view\TelaLoginSecretaria$4.class
@@ -81,9 +80,7 @@ view\MENUsecretaria$2.class
 view\TelaEditarPacientes$3.class
 view\MarcarConsulta$11.class
 view\BuscarMedicos$5.class
-view\CadastrarMedicos.class
 view\MarcarConsulta$9.class
-view\CadastrarMedicos$5.class
 Entidades\Secretaria.class
 view\MarcarConsulta$6.class
 view\BuscarPacientes$3.class

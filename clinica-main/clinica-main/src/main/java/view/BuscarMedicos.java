@@ -6,7 +6,7 @@ package view;
 
 import DAO.MedicosDAO;
 import Entidades.Medicos;
-import java.sql.SQLException;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -55,17 +55,8 @@ public class BuscarMedicos extends javax.swing.JFrame {
             }
         });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-=======
->>>>>>> parent of fad44b5 (cadastromedicoos)
-        jButton1.setText("BUSCAR MÉDICO");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-=======
         Buscar.setText("BUSCAR MÉDICO");
         Buscar.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> felipe
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarActionPerformed(evt);
             }
@@ -82,20 +73,12 @@ public class BuscarMedicos extends javax.swing.JFrame {
             }
         });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-=======
->>>>>>> parent of fad44b5 (cadastromedicoos)
-        jButton4.setText("EXCLUIR");
-=======
         Excluir.setText("EXCLUIR");
         Excluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExcluirActionPerformed(evt);
             }
         });
->>>>>>> felipe
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -155,38 +138,6 @@ public class BuscarMedicos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
-         String CRM;
-       
-       CRM = jTextField1.getText();
-      
-        
-       Medicos med = new Medicos();
-       
-       med.setCrm(CRM);
-       
-        
-       MedicosDAO objMedicoDAO2 = new MedicosDAO();
-       
-       jTextArea1.setText("");
-       for (Medicos c :  objMedicoDAO2.getAllMedicosPorCrm(med)) {
-           jTextArea1.append(
-                   
-                   "ID: " + c.getId() + "\n" +
-                           "CRM: " + c.getCrm() + "\n" +
-                                   "Nome: " + c.getNome_medico() + "\n" +
-                                           "CPF: " + c.getCpf() + "\n" +
-                                                   "RG: " + c.getRg() + "\n" +
-                                                           "Telefone: " + c.getTelefone() + "\n" +
-                                                                   "Sexo: " + c.getSexo() + "\n" +
-                                                                           "Endereço: " + c.getEndereco() + "\n" +
-                                                                                   "Senha de Acesso: " + c.getSenha_de_acesso() + "\n" +
-                                                                                           "\n"
-           );
-           
-       }
-    }//GEN-LAST:event_BuscarActionPerformed
-
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -200,7 +151,7 @@ public class BuscarMedicos extends javax.swing.JFrame {
          
          Medicos objmed = new Medicos();
          
-         objmed.setCrm(CRM);
+        // objmed.setCrm(CRM);
 
    
     int confirm = JOptionPane.showConfirmDialog(this,
@@ -210,7 +161,7 @@ public class BuscarMedicos extends javax.swing.JFrame {
 
     if (confirm == JOptionPane.YES_OPTION) {
         Medicos med = new Medicos();
-        med.setCrm(CRM);
+        //med.setCrm(CRM);
 
         MedicosDAO objMedicoDAO2 = new MedicosDAO();
 
@@ -232,6 +183,36 @@ public class BuscarMedicos extends javax.swing.JFrame {
        
         
     }//GEN-LAST:event_ExcluirActionPerformed
+
+    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
+        String CRM;
+
+        CRM = jTextField1.getText();
+
+        Medicos med = new Medicos();
+
+        med.setCrm(CRM);
+
+        MedicosDAO objMedicoDAO2 = new MedicosDAO();
+
+        jTextArea1.setText("");
+        for (Medicos c :  objMedicoDAO2.getAllMedicosPorCrm(med)) {
+            jTextArea1.append(
+
+                "ID: " + c.getId() + "\n" +
+                "CRM: " + c.getCrm() + "\n" +
+                "Nome: " + c.getNome_medico() + "\n" +
+                "CPF: " + c.getCpf() + "\n" +
+                "RG: " + c.getRg() + "\n" +
+                "Telefone: " + c.getTelefone() + "\n" +
+                "Sexo: " + c.getSexo() + "\n" +
+                "Endereço: " + c.getEndereco() + "\n" +
+                "Senha de Acesso: " + c.getSenha_de_acesso() + "\n" +
+                "\n"
+            );
+
+        }
+    }//GEN-LAST:event_BuscarActionPerformed
 
     /**
      * @param args the command line arguments

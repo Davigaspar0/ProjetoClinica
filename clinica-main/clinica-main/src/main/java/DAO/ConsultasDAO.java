@@ -21,13 +21,13 @@ package DAO;
             try (ResultSet rs = executeQuery("SELECT * FROM consultas ")) {
                 while(rs.next())
                 {
-                    consultas.add(populateConsultas(rs));
+                    consultas.add(BUSCARConsultas(rs));
                 }
             }
             return consultas;
         }
         
-            private Consultas populateConsultas(ResultSet rs) throws SQLException {
+            private Consultas BUSCARConsultas(ResultSet rs) throws SQLException {
             Consultas retorno = new Consultas();
             
             //retorno.setId(Integer.parseInt(rs.getString("id")));

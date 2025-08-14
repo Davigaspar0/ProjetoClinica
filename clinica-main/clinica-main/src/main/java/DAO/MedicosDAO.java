@@ -93,7 +93,7 @@ public class MedicosDAO  extends GenericDAO
         
         retorno.setId(Integer.valueOf(rs.getString("id")));
         retorno.setNome_medico(rs.getString("nome_medico"));
-        retorno.setCrm(rs.getInt("crm"));
+        retorno.setCrm(rs.getString("crm"));
         retorno.setRg(rs.getString("rg"));
         retorno.setCpf(rs.getString("cpf"));
         retorno.setTelefone(rs.getString("telefone"));

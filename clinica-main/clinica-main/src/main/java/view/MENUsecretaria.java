@@ -177,8 +177,8 @@ public class MENUsecretaria extends javax.swing.JFrame {
     }//GEN-LAST:event_BuscarConsuActionPerformed
 
     private void CadMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadMedActionPerformed
-       CadastrarMedicos cad = new CadastrarMedicos();
-        cad.setVisible(true);
+       //CadastrarMedicos cad = new CadastrarMedicos();
+        //cad.setVisible(true);
         dispose();
     }//GEN-LAST:event_CadMedActionPerformed
 

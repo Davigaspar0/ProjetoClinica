@@ -4,8 +4,16 @@
  */
 package view;
 
+import DAO.ConsultasDAO;
 import DAO.MedicosDAO;
+import Entidades.Consultas;
 import Entidades.Medicos;
+import Entidades.Paciente;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import view.CadastrarPacientes;
 
 /**
  *
@@ -38,7 +46,7 @@ public class MarcarConsulta extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        ButBuscarConsulta = new javax.swing.JToggleButton();
+        BUTlimparcampo = new javax.swing.JToggleButton();
         ButMarcarConsulta = new javax.swing.JToggleButton();
         txtCrmMedico = new javax.swing.JTextField();
         txtCpfCliente = new javax.swing.JTextField();
@@ -48,8 +56,7 @@ public class MarcarConsulta extends javax.swing.JFrame {
         txtNomePaciente = new javax.swing.JTextField();
         txtData = new javax.swing.JTextField();
         txtHora = new javax.swing.JTextField();
-        ButBuscarMedico = new javax.swing.JToggleButton();
-        jToggleButton10 = new javax.swing.JToggleButton();
+        BTNbuscar = new javax.swing.JToggleButton();
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -90,11 +97,11 @@ public class MarcarConsulta extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Hora");
 
-        ButBuscarConsulta.setForeground(new java.awt.Color(0, 0, 0));
-        ButBuscarConsulta.setText("Buscar Consultas");
-        ButBuscarConsulta.addActionListener(new java.awt.event.ActionListener() {
+        BUTlimparcampo.setForeground(new java.awt.Color(0, 0, 0));
+        BUTlimparcampo.setText("LIMPAR CAMPOS");
+        BUTlimparcampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButBuscarConsultaActionPerformed(evt);
+                BUTlimparcampoActionPerformed(evt);
             }
         });
 
@@ -148,16 +155,13 @@ public class MarcarConsulta extends javax.swing.JFrame {
             }
         });
 
-        ButBuscarMedico.setForeground(new java.awt.Color(0, 0, 0));
-        ButBuscarMedico.setText("Buscar Médico");
-        ButBuscarMedico.addActionListener(new java.awt.event.ActionListener() {
+        BTNbuscar.setForeground(new java.awt.Color(0, 0, 0));
+        BTNbuscar.setText("BUSCAR");
+        BTNbuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButBuscarMedicoActionPerformed(evt);
+                BTNbuscarActionPerformed(evt);
             }
         });
-
-        jToggleButton10.setForeground(new java.awt.Color(0, 0, 0));
-        jToggleButton10.setText("Buscar Paciente");
 
         jLabel11.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
         jLabel11.setText("DFR - Clínica");
@@ -170,27 +174,24 @@ public class MarcarConsulta extends javax.swing.JFrame {
                 .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel5))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(13, 13, 13)
-                                        .addComponent(ButBuscarConsulta))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
+                                        .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(BUTlimparcampo))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ButMarcarConsulta, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ButMarcarConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(txtIdPaciente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
@@ -202,27 +203,25 @@ public class MarcarConsulta extends javax.swing.JFrame {
                                     .addComponent(txtNomeMedico)
                                     .addComponent(txtNomePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 38, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCrmMedico)
-                            .addComponent(txtCpfCliente))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtCrmMedico)
+                                    .addComponent(txtCpfCliente))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ButBuscarMedico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                        .addComponent(BTNbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38))))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jLabel11))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(jLabel1)))
+                .addGap(88, 88, 88)
+                .addComponent(jLabel11)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -233,16 +232,17 @@ public class MarcarConsulta extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtCrmMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ButBuscarMedico))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtCpfCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(txtCrmMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtCpfCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(BTNbuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(2, 2, 2)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
@@ -269,35 +269,17 @@ public class MarcarConsulta extends javax.swing.JFrame {
                         .addComponent(jLabel9)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButBuscarConsulta)
+                    .addComponent(BUTlimparcampo)
                     .addComponent(ButMarcarConsulta))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ButBuscarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButBuscarConsultaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ButBuscarConsultaActionPerformed
-
     private void ButMarcarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButMarcarConsultaActionPerformed
         
     }//GEN-LAST:event_ButMarcarConsultaActionPerformed
-
-    private void ButBuscarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButBuscarMedicoActionPerformed
-        String CRM;
-        CRM = txtCrmMedico.getText();
-        int crm = Integer.parseInt(CRM);
-        
-        MedicosDAO objsecretariaDAO = new MedicosDAO();
-        
-        
-       
-       
-       
-     
-    }//GEN-LAST:event_ButBuscarMedicoActionPerformed
 
     private void txtCrmMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCrmMedicoActionPerformed
         // TODO add your handling code here:
@@ -326,6 +308,28 @@ public class MarcarConsulta extends javax.swing.JFrame {
     private void txtNomePacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomePacienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomePacienteActionPerformed
+
+    private void BUTlimparcampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BUTlimparcampoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BUTlimparcampoActionPerformed
+
+    private void BTNbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNbuscarActionPerformed
+     String crm, cpf;
+
+    crm = txtCrmMedico.getText();
+    cpf = txtCpfCliente.getText();
+
+    Medicos objconsulta = new Medicos();
+
+    objconsulta.setCrm(crm);
+    objconsulta.setCpf(cpf);
+
+    MedicosDAO dao = new MedicosDAO();
+    dao.getAllMedicosPorCrm(objconsulta);
+    txtNomeMedico.setText(objconsulta.getNome_medico());
+    txtNomePaciente.setText(String.valueOf(objconsulta.getId()));
+
+    }//GEN-LAST:event_BTNbuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -363,8 +367,8 @@ public class MarcarConsulta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton ButBuscarConsulta;
-    private javax.swing.JToggleButton ButBuscarMedico;
+    private javax.swing.JToggleButton BTNbuscar;
+    private javax.swing.JToggleButton BUTlimparcampo;
     private javax.swing.JToggleButton ButMarcarConsulta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -376,7 +380,6 @@ public class MarcarConsulta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JTextField txtCpfCliente;
     private javax.swing.JTextField txtCrmMedico;
     private javax.swing.JTextField txtData;
