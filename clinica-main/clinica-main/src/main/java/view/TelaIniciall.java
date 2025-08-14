@@ -147,7 +147,10 @@ public class TelaIniciall extends javax.swing.JFrame {
                dispose();
     }//GEN-LAST:event_BtnSecActionPerformed
 
-    /**
+    /**if (txtID.getText().equals("") ){
+            JOptionPane.showMessageDialog(null, "PARA EDITAR COLOQUE O ID!");
+            return;
+        }
      * @param args the command line arguments
      */
     public static void main(String args[]) {
