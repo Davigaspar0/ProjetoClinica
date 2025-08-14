@@ -31,8 +31,8 @@ package DAO;
             Consultas retorno = new Consultas();
             
             //retorno.setId(Integer.parseInt(rs.getString("id")));
-            retorno.setIdDoctor(rs.getInt("id_med"));
-            retorno.setIdPaciente(rs.getInt("id_pac"));
+            //retorno.setNome_medico(rs.getInt("id_med"));
+            //retorno.setNome_paciente(rs.getInt("id_pac"));
             retorno.setData(rs.getString("data"));
             retorno.setHora(rs.getString("hora"));
            
@@ -45,23 +45,23 @@ package DAO;
         
         public Integer addConsultas(Consultas consultas) throws SQLException
         {
-            String query = "INSERT INTO consultas(nome_med, nome_pac, data, hora, ficha_medica) VALUES (?,?,?,?)";
-            executeComand(query, consultas.getIdDoctor(), consultas.getIdPaciente(), consultas.getData(), consultas.getHora());        
-            return consultas.getIdConsulta();
+            String query = "INSERT INTO consultas(nome_medico, nome_paciente, data, hora) VALUES (?,?,?,?)";
+            executeComand(query, consultas.getNome_paciente(), consultas.getNome_medico(),consultas.getData(), consultas.getHora());        
+            return consultas.getId_consulta();
             
         }
         
         public void updateConsultas(Consultas consultas) throws SQLException
         {
             String query = "UPDATE consultas SET desc WHERE id =?";
-            executeComand(query, consultas.getIdDoctor(), consultas.getIdPaciente(), consultas.getData(), consultas.getHora(), consultas.getIdConsulta());         
+           // executeComand(query, consultas.getIdDoctor(), consultas.getIdPaciente(), consultas.getData(), consultas.getHora(), consultas.getIdConsulta());         
             
         }
         
         public void deleteConsultas(Consultas consultas) throws SQLException
         {
             String query = "DELETE FROM consultas WHERE id = ? ";
-            executeComand(query, consultas.getIdConsulta());
+            //executeComand(query, consultas.getIdConsulta());
         
         }
         

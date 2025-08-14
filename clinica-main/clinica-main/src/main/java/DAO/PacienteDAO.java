@@ -54,7 +54,7 @@ public class PacienteDAO extends GenericDAO{
         List<Paciente> paciente = new LinkedList<>();
         
         try ( //ResultSet rs = executeQuery("SELECT * FROM medicos WHERE nome_medico like ?", "%"+nome);
-                ResultSet rs = executeQuery("SELECT * FROM paciente WHERE cpf like ?",cpf+"%")) {
+                ResultSet rs = executeQuery("SELECT * FROM paciente WHERE cpf like ?",cpf.getCpf()+"%")) {
             while(rs.next())
             {
             Paciente pac2 = new Paciente();
