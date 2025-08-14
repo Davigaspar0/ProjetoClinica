@@ -56,7 +56,10 @@ public class BuscarMedicos extends javax.swing.JFrame {
         });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+=======
+>>>>>>> parent of fad44b5 (cadastromedicoos)
         jButton1.setText("BUSCAR MÉDICO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
 =======
@@ -72,7 +75,6 @@ public class BuscarMedicos extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton3.setText("EDITAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +83,10 @@ public class BuscarMedicos extends javax.swing.JFrame {
         });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+=======
+>>>>>>> parent of fad44b5 (cadastromedicoos)
         jButton4.setText("EXCLUIR");
 =======
         Excluir.setText("EXCLUIR");

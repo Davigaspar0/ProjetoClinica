@@ -43,7 +43,6 @@ public class MENUsecretaria extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
         jLabel9.setText("DFR - Clínica");
 
-        CadMed.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         CadMed.setText("CADASTRAR MÉDICOS");
         CadMed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,7 +50,6 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        CadPaci.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         CadPaci.setText("CADASTRAR PACIENTES");
         CadPaci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,7 +57,6 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        BuscarMedicos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BuscarMedicos.setText("BUSCAR MÉDICOS");
         BuscarMedicos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,7 +64,6 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        BuscarPac.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BuscarPac.setText("BUSCAR PACIENTES");
         BuscarPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,7 +71,6 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        MarcarCons.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MarcarCons.setText("MARCAR CONSULTA");
         MarcarCons.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,7 +78,6 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        BuscarConsu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BuscarConsu.setText("BUSCAR CONSULTA");
         BuscarConsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +113,7 @@ public class MENUsecretaria extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(BuscarPac)
                                     .addComponent(MarcarCons))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
@@ -151,7 +145,7 @@ public class MENUsecretaria extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(BtnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

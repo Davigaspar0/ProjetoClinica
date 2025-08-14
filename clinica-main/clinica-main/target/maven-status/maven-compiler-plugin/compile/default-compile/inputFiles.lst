@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\LEI\Documents\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\BuscarPacientes.java
 C:\Users\LEI\Documents\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\TelaIniciall.java
 C:\Users\LEI\Documents\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\Entidades\Paciente.java
@@ -43,12 +44,17 @@ C:\Users\Felip\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-ma
 C:\Users\Felip\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\TelaLoginSecretaria.java
 >>>>>>> felipe
 =======
+=======
+>>>>>>> parent of fad44b5 (cadastromedicoos)
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\DAO\PacienteDAO.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\DAO\SecretariaDAO.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\BuscarConsulta.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\MarcarConsulta.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\TelaIniciall.java
+<<<<<<< HEAD
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\TelaEditarPacientes.java
+=======
+>>>>>>> parent of fad44b5 (cadastromedicoos)
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\TelaCadastroSecretaria.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\Entidades\Administrador.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\Entidades\Secretaria.java
@@ -64,4 +70,7 @@ C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-ma
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\BuscarMedicos.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\BuscarPacientes.java
 C:\Users\davio\OneDrive\Documentos\GitHub\ProjetoClinica\clinica-main\clinica-main\src\main\java\view\CadastrarPacientes.java
+<<<<<<< HEAD
 >>>>>>> BrandDavi
+=======
+>>>>>>> parent of fad44b5 (cadastromedicoos)

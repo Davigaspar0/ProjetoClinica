@@ -55,33 +55,42 @@ public class MarcarConsulta extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Marcar Consulta");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("CRM do Médico");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("CPF do Cliente");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("ID");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Médico");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("ID");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Paciente");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("DATA");
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Hora");
 
-        ButBuscarConsulta.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ButBuscarConsulta.setForeground(new java.awt.Color(0, 0, 0));
         ButBuscarConsulta.setText("Buscar Consultas");
         ButBuscarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,7 +98,7 @@ public class MarcarConsulta extends javax.swing.JFrame {
             }
         });
 
-        ButMarcarConsulta.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ButMarcarConsulta.setForeground(new java.awt.Color(0, 0, 0));
         ButMarcarConsulta.setText("Marcar Consulta");
         ButMarcarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +148,7 @@ public class MarcarConsulta extends javax.swing.JFrame {
             }
         });
 
-        ButBuscarMedico.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ButBuscarMedico.setForeground(new java.awt.Color(0, 0, 0));
         ButBuscarMedico.setText("Buscar Médico");
         ButBuscarMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +156,7 @@ public class MarcarConsulta extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jToggleButton10.setForeground(new java.awt.Color(0, 0, 0));
         jToggleButton10.setText("Buscar Paciente");
 
         jLabel11.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N

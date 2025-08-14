@@ -123,7 +123,6 @@ public class CadastrarPacientes extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("CONVENIO");
 
-        btnCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCadastrar.setText("CADASTRAR");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +130,6 @@ public class CadastrarPacientes extends javax.swing.JFrame {
             }
         });
 
-        btnLimpa.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLimpa.setText("LIMPAR CAMPOS");
         btnLimpa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
