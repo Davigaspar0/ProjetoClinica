@@ -10,7 +10,11 @@ package Entidades;
  */
 public class Medicos {
     private Integer id;
+<<<<<<< HEAD
     private String Crm;
+=======
+    private String crm;
+>>>>>>> felipe
     private String nome_medico;
     private String rg;
     private String cpf;
@@ -18,6 +22,14 @@ public class Medicos {
     private String sexo;
     private String endereco;
     private String senha_de_acesso;
+<<<<<<< HEAD
+=======
+    
+
+    
+    public Medicos() {
+    }
+>>>>>>> felipe
 
     /**
      * @return the id
@@ -34,6 +46,7 @@ public class Medicos {
     }
 
     /**
+<<<<<<< HEAD
      * @return the Crm
      */
     public String getCrm() {
@@ -45,6 +58,19 @@ public class Medicos {
      */
     public void setCrm(String Crm) {
         this.Crm = Crm;
+=======
+     * @return the crm
+     */
+    public String getCrm() {
+        return crm;
+    }
+
+    /**
+     * @param crm the crm to set
+     */
+    public void setCrm(String crm) {
+        this.crm = crm;
+>>>>>>> felipe
     }
 
     /**

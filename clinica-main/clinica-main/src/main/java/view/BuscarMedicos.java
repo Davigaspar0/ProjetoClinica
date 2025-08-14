@@ -4,6 +4,11 @@
  */
 package view;
 
+import DAO.MedicosDAO;
+import Entidades.Medicos;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author davio
@@ -30,11 +35,11 @@ public class BuscarMedicos extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        Buscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Excluir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,11 +55,16 @@ public class BuscarMedicos extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("BUSCAR MÉDICO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
+=======
+        Buscar.setText("BUSCAR MÉDICO");
+        Buscar.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> felipe
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BuscarActionPerformed(evt);
             }
         });
 
@@ -70,8 +80,17 @@ public class BuscarMedicos extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton4.setText("EXCLUIR");
+=======
+        Excluir.setText("EXCLUIR");
+        Excluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExcluirActionPerformed(evt);
+            }
+        });
+>>>>>>> felipe
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -85,13 +104,13 @@ public class BuscarMedicos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addComponent(jButton3)
                         .addGap(64, 64, 64)
-                        .addComponent(jButton4)))
+                        .addComponent(Excluir)))
                 .addContainerGap(42, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -107,13 +126,13 @@ public class BuscarMedicos extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(Excluir))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -131,9 +150,37 @@ public class BuscarMedicos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
+         String CRM;
+       
+       CRM = jTextField1.getText();
+      
+        
+       Medicos med = new Medicos();
+       
+       med.setCrm(CRM);
+       
+        
+       MedicosDAO objMedicoDAO2 = new MedicosDAO();
+       
+       jTextArea1.setText("");
+       for (Medicos c :  objMedicoDAO2.getAllMedicosPorCrm(med)) {
+           jTextArea1.append(
+                   
+                   "ID: " + c.getId() + "\n" +
+                           "CRM: " + c.getCrm() + "\n" +
+                                   "Nome: " + c.getNome_medico() + "\n" +
+                                           "CPF: " + c.getCpf() + "\n" +
+                                                   "RG: " + c.getRg() + "\n" +
+                                                           "Telefone: " + c.getTelefone() + "\n" +
+                                                                   "Sexo: " + c.getSexo() + "\n" +
+                                                                           "Endereço: " + c.getEndereco() + "\n" +
+                                                                                   "Senha de Acesso: " + c.getSenha_de_acesso() + "\n" +
+                                                                                           "\n"
+           );
+           
+       }
+    }//GEN-LAST:event_BuscarActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -142,6 +189,44 @@ public class BuscarMedicos extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void ExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirActionPerformed
+         String CRM = jTextField1.getText();
+         
+         Medicos objmed = new Medicos();
+         
+         objmed.setCrm(CRM);
+
+   
+    int confirm = JOptionPane.showConfirmDialog(this,
+            "Tem certeza que deseja excluir o médico com CRM " + CRM + "?",
+            "Confirmar exclusão",
+            JOptionPane.YES_NO_OPTION);
+
+    if (confirm == JOptionPane.YES_OPTION) {
+        Medicos med = new Medicos();
+        med.setCrm(CRM);
+
+        MedicosDAO objMedicoDAO2 = new MedicosDAO();
+
+        try {
+            objMedicoDAO2.deleteMedicos(med); 
+            JOptionPane.showMessageDialog(this, "Médico excluído com sucesso!");
+            
+            
+            jTextField1.setText("");
+            jTextArea1.setText("");
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erro ao excluir médico: " + e.getMessage());
+        }
+    }
+       
+       
+       
+        
+    }//GEN-LAST:event_ExcluirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,9 +264,9 @@ public class BuscarMedicos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Buscar;
+    private javax.swing.JButton Excluir;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
