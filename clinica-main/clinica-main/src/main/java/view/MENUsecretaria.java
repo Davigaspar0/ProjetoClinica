@@ -163,22 +163,26 @@ public class MENUsecretaria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CadPaciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadPaciActionPerformed
-          CadastrarPacientes cad = new CadastrarPacientes();
+        CadastrarMedico cad = new CadastrarMedico();
         cad.setVisible(true);
         dispose();
     }//GEN-LAST:event_CadPaciActionPerformed
 
     private void BuscarMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarMedicosActionPerformed
-        // TODO add your handling code here:
+        BuscarMedicos cad5 = new BuscarMedicos();
+        cad5.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BuscarMedicosActionPerformed
 
     private void BuscarConsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarConsuActionPerformed
-        // TODO add your handling code here:
+        BuscarConsulta cad5 = new BuscarConsulta();
+        cad5.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BuscarConsuActionPerformed
 
     private void CadMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadMedActionPerformed
-       //CadastrarMedicos cad = new CadastrarMedicos();
-        //cad.setVisible(true);
+       CadastrarMedico cad = new CadastrarMedico();
+       cad.setVisible(true);
         dispose();
     }//GEN-LAST:event_CadMedActionPerformed
 
@@ -189,7 +193,9 @@ public class MENUsecretaria extends javax.swing.JFrame {
     }//GEN-LAST:event_BuscarPacActionPerformed
 
     private void MarcarConsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarcarConsActionPerformed
-        // TODO add your handling code here:
+        MarcarConsulta cad = new MarcarConsulta();
+       cad.setVisible(true);
+        dispose();
     }//GEN-LAST:event_MarcarConsActionPerformed
 
     private void BtnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSairActionPerformed

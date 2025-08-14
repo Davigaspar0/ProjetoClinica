@@ -62,6 +62,7 @@ public class MarcarConsulta extends javax.swing.JFrame {
         BTNbuscar = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
+        BtnVoltar = new javax.swing.JButton();
 
         jFormattedTextField1.setText("jFormattedTextField1");
 
@@ -185,12 +186,23 @@ public class MarcarConsulta extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("DFR - Clínica");
 
+        BtnVoltar.setBackground(new java.awt.Color(0, 204, 204));
+        BtnVoltar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnVoltar.setText("VOLTAR");
+        BtnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addComponent(BtnVoltar)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -200,6 +212,9 @@ public class MarcarConsulta extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel10)
                 .addContainerGap(21, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(BtnVoltar))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -422,6 +437,14 @@ public class MarcarConsulta extends javax.swing.JFrame {
 
     }//GEN-LAST:event_BTNbuscarActionPerformed
 
+    private void BtnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVoltarActionPerformed
+       MENUsecretaria cad65 = new MENUsecretaria();
+             cad65.setVisible(true);
+               dispose();  
+ 
+       
+    }//GEN-LAST:event_BtnVoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -460,6 +483,7 @@ public class MarcarConsulta extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton BTNbuscar;
     private javax.swing.JToggleButton BUTlimparcampo;
+    private javax.swing.JButton BtnVoltar;
     private javax.swing.JToggleButton ButMarcarConsulta;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;

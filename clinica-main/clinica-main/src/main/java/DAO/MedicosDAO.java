@@ -67,8 +67,8 @@ public class MedicosDAO  extends GenericDAO
     
     public Integer addMedicos(Medicos medicos ) throws SQLException
     {
-        String query = "INSERT INTO medicos(crm, nome_medico, cpf, rg, telefone, endereco, sexo) VALUES (?,?,?,?,?,?,?)";
-        executeComand(query, medicos.getCrm(), medicos.getNome_medico(), medicos.getCpf(), medicos.getRg(), medicos.getTelefone(), medicos.getEndereco(), medicos.getSexo());
+        String query = "INSERT INTO medicos(crm, nome_medico, cpf, rg, telefone, endereco, sexo, senha_de_acesso) VALUES (?,?,?,?,?,?,?,?)";
+        executeComand(query, medicos.getCrm(), medicos.getNome_medico(), medicos.getCpf(), medicos.getRg(), medicos.getTelefone(), medicos.getEndereco(), medicos.getSexo(), medicos.getSenha_de_acesso());
         return medicos.getId();
         
     }
