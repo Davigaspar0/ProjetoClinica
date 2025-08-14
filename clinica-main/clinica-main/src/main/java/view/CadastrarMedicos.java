@@ -252,6 +252,7 @@ public class CadastrarMedicos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTELEFONEActionPerformed
 
+<<<<<<< HEAD
     private void CadastrarMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarMedicosActionPerformed
         // TODO add your handling code here:
         String Nome,Cpf,Sexo,Endereço,Telefone,crm,Rg,Senha;
@@ -289,6 +290,11 @@ public class CadastrarMedicos extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "Cadastrado com sucesso");
        } catch (SQLException ex) {
            Logger.getLogger(CadastrarMedicos.class.getName()).log(Level.SEVERE, null, ex);
+=======
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+     
+    }//GEN-LAST:event_jButton2ActionPerformed
+>>>>>>> BrandDavi
 
        }
       
