@@ -292,6 +292,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnCadastrar">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="CADASTRAR"/>
           </Properties>
           <Events>
@@ -300,6 +303,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLimpa">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="LIMPAR CAMPOS"/>
           </Properties>
           <Events>

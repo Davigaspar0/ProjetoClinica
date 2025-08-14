@@ -112,6 +112,8 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+            </Property>
             <Property name="text" type="java.lang.String" value="BUSCAR M&#xc9;DICO"/>
           </Properties>
           <Events>
@@ -135,6 +137,9 @@
         </Container>
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="EDITAR"/>
           </Properties>
           <Events>
@@ -143,6 +148,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="EXCLUIR"/>
           </Properties>
         </Component>
