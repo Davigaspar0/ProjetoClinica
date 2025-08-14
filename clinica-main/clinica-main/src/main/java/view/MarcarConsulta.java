@@ -326,8 +326,9 @@ public class MarcarConsulta extends javax.swing.JFrame {
 
     MedicosDAO dao = new MedicosDAO();
     dao.getAllMedicosPorCrm(objconsulta);
+    txtIdMedico.setText(String.valueOf(objconsulta.getId()));
     txtNomeMedico.setText(objconsulta.getNome_medico());
-    txtNomePaciente.setText(String.valueOf(objconsulta.getId()));
+    
 
     }//GEN-LAST:event_BTNbuscarActionPerformed
 
