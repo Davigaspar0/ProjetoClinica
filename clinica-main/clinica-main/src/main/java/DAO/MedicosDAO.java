@@ -2,6 +2,7 @@
 package DAO;
  
 import Entidades.Medicos;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.util.LinkedList;
@@ -9,7 +10,8 @@ import java.util.List;
 
 public class MedicosDAO  extends GenericDAO
 {
-
+ Connection cn;
+    
     
     public void getMedicos (int crmMedico) throws SQLException
     {
@@ -49,7 +51,7 @@ public class MedicosDAO  extends GenericDAO
         return medicos;
     }
     
-    public List<Medicos> getAllMedicosPorCrm(int crm) throws SQLException 
+    public List<Medicos> getAllMedicosPorCrm(String crm) throws SQLException 
     {
         List<Medicos> medicos = new LinkedList<>();
         
@@ -80,6 +82,7 @@ public class MedicosDAO  extends GenericDAO
     
     public void deleteMedicos(Medicos medicos ) throws SQLException
     {
+       
         String query = "DELETE FROM medicos WHERE id = ? ";
         executeComand(query, medicos.getId());
     
@@ -90,7 +93,7 @@ public class MedicosDAO  extends GenericDAO
         
         retorno.setId(Integer.valueOf(rs.getString("id")));
         retorno.setNome_medico(rs.getString("nome_medico"));
-        retorno.setCrm(rs.getInt("crm"));
+        retorno.setCrm(rs.getString("crm"));
         retorno.setRg(rs.getString("rg"));
         retorno.setCpf(rs.getString("cpf"));
         retorno.setTelefone(rs.getString("telefone"));
@@ -100,6 +103,26 @@ public class MedicosDAO  extends GenericDAO
         return retorno;
         
     }
+
+    public List<Medicos> getAllMedicosPorCrm(Medicos medico) {
+    List<Medicos> medicos = new LinkedList<>();
+    
+    try (ResultSet rs = executeQuery(
+            "SELECT * FROM medicos WHERE crm LIKE ?",
+            medico.getCrm() + "%")) {
+        
+        while (rs.next()) {
+            medicos.add(populateMedico(rs)); // seu método que transforma ResultSet em Medicos
+        }
+        
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    
+    return medicos;
+}
+
+    
 
     
 }
