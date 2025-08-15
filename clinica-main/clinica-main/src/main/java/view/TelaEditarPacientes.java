@@ -35,6 +35,12 @@ public class TelaEditarPacientes extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
+<<<<<<< HEAD
+=======
+        jLabel14 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+>>>>>>> BrandDoDavi(Ultima_dia)
         jLabel3 = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -66,9 +72,20 @@ public class TelaEditarPacientes extends javax.swing.JFrame {
 
         jTextField7.setText("jTextField7");
 
+        jLabel14.setText("jLabel14");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
 
+<<<<<<< HEAD
+=======
+        jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel9.setText("DFR - Clínica");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("O que vc quer Editar?(Pacientes)");
+
+>>>>>>> BrandDoDavi(Ultima_dia)
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("NOME COMPLETO");
 
@@ -111,6 +128,16 @@ public class TelaEditarPacientes extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
+=======
+        jButton3.setText("VOLTAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+>>>>>>> BrandDoDavi(Ultima_dia)
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("ID");
 
@@ -330,6 +357,7 @@ public class TelaEditarPacientes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel13AncestorAdded
 
+<<<<<<< HEAD
     private void BtLimparCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtLimparCamposActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtLimparCamposActionPerformed
@@ -337,6 +365,24 @@ public class TelaEditarPacientes extends javax.swing.JFrame {
     private void BtVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtVoltarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtVoltarActionPerformed
+=======
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      txtNome.setText("");
+      txtsexo.setText("");
+      txtEndereço.setText("");
+      txtconv.setText("");
+      txttelefone.setText("");
+      txtCPF.setText("");
+      txtRG.setText("");
+      txtID.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
+>>>>>>> BrandDoDavi(Ultima_dia)
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+         BuscarPacientes cad = new BuscarPacientes();
+        cad.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -382,6 +428,7 @@ public class TelaEditarPacientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

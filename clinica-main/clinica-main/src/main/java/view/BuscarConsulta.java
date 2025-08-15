@@ -4,6 +4,16 @@
  */
 package view;
 
+import DAO.ConsultasDAO;
+import DAO.MedicosDAO;
+import DAO.PacienteDAO;
+import Entidades.Consultas;
+import Entidades.Medicos;
+import Entidades.Paciente;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author davio
@@ -28,10 +38,10 @@ public class BuscarConsulta extends javax.swing.JFrame {
 
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtMedCrm = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtCPFCliente = new javax.swing.JTextField();
+        btnVisu = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
@@ -43,26 +53,26 @@ public class BuscarConsulta extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setText("CRM do Médico");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtMedCrm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtMedCrmActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("CPF do Cliente");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtCPFCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtCPFClienteActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setText("Visualizar Consulta");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnVisu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnVisu.setText("Visualizar Consulta");
+        btnVisu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnVisuActionPerformed(evt);
             }
         });
 
@@ -89,10 +99,10 @@ public class BuscarConsulta extends javax.swing.JFrame {
                                     .addComponent(jLabel2))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtMedCrm, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtCPFCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1))))
+                                .addComponent(btnVisu))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(jLabel6)))
@@ -105,15 +115,15 @@ public class BuscarConsulta extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(btnVisu, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtMedCrm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtCPFCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(44, Short.MAX_VALUE))
@@ -122,17 +132,76 @@ public class BuscarConsulta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void txtMedCrmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMedCrmActionPerformed
+        
+    }//GEN-LAST:event_txtMedCrmActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    private void txtCPFClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCPFClienteActionPerformed
+       
+    }//GEN-LAST:event_txtCPFClienteActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnVisuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisuActionPerformed
+        String crm,cpf;
+
+        crm = txtMedCrm.getText();
+        cpf = txtMedCrm.getText();
+                
+
+        Medicos objmedico = new Medicos();
+        Paciente objPaciente = new Paciente();
+        Consultas objConsulta = new Consultas();
+        
+        objmedico.setCrm(crm);
+        objPaciente.setCpf(cpf);
+       
+
+       MedicosDAO dao = new MedicosDAO();
+        PacienteDAO dao2 = new PacienteDAO();
+        ConsultasDAO dao3 = new ConsultasDAO();
+        
+      try {
+        for (Medicos c : dao.getAllMedicosPorCrm(objmedico)) {
+        
+       
+        txtMedCrm.setText(c.getCrm());
+        break; 
+    }
+    } catch (Exception ex) {
+        txtMedCrm.setText("Erro ao buscar médico");
+        Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+    } try {
+        for (Paciente p : dao2.getAllPacientesPorCpf(objPaciente)) {
+        
+        txtCPFCliente.setText(p.getCpf());
+        break; 
+    }
+    } catch (Exception ex) {
+        txtCPFCliente.setText("Erro ao buscar Paciente");
+        Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+} try { 
+        
+        jTextArea1.setText("");
+        
+        for (Consultas con :  dao3.getAllConsultas(objConsulta)) {
+            jTextArea1.append(
+                
+            "ID: " + con.getId_consulta() + "\n" +
+            "Medico: " + con.getNome_medico() + "\n" +
+            "Paciente: " + con.getNome_paciente() + "\n" +
+            "data: " + con.getData() + "\n" +
+            "hora: " + con.getHora() + "\n" +
+            "\n"
+            );
+                    
+           } 
+        } catch (SQLException ex) {
+              jTextArea1.append("Erro ao consultar consulta: " + ex.getMessage());
+    }
+    
+       
+        
+    
+    }//GEN-LAST:event_btnVisuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,14 +240,14 @@ public class BuscarConsulta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnVisu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField txtCPFCliente;
+    private javax.swing.JTextField txtMedCrm;
     // End of variables declaration//GEN-END:variables
 }

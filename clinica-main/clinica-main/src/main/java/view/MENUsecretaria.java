@@ -191,7 +191,7 @@ public class MENUsecretaria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CadPaciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadPaciActionPerformed
-        CadastrarMedico cad = new CadastrarMedico();
+        CadastrarPacientes cad = new CadastrarPacientes();
         cad.setVisible(true);
         dispose();
     }//GEN-LAST:event_CadPaciActionPerformed
