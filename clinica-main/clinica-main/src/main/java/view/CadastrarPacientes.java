@@ -61,14 +61,20 @@ public class CadastrarPacientes extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 204, 255));
 
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Cadastro de Pacientes");
 
         jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("DFR - Clínica");
 
-        BtnHOME.setBackground(new java.awt.Color(102, 204, 255));
+        BtnHOME.setBackground(new java.awt.Color(0, 204, 204));
         BtnHOME.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnHOME.setForeground(new java.awt.Color(255, 255, 255));
+        BtnHOME.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\voltar.png")); // NOI18N
         BtnHOME.setText("VOLTAR");
         BtnHOME.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +83,7 @@ public class CadastrarPacientes extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("NOME COMPLETO");
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
@@ -86,6 +93,7 @@ public class CadastrarPacientes extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("SEXO");
 
         txtSexo.addActionListener(new java.awt.event.ActionListener() {
@@ -95,9 +103,11 @@ public class CadastrarPacientes extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("CPF");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("TELEFONE");
 
         txtTelefone.addActionListener(new java.awt.event.ActionListener() {
@@ -113,9 +123,11 @@ public class CadastrarPacientes extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("RG");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("ENDEREÇO");
 
         txtEndereço.addActionListener(new java.awt.event.ActionListener() {
@@ -125,10 +137,13 @@ public class CadastrarPacientes extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("CONVENIO");
 
-        btnCadastrar.setBackground(new java.awt.Color(102, 204, 255));
+        btnCadastrar.setBackground(new java.awt.Color(0, 204, 204));
         btnCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\diskette.png")); // NOI18N
         btnCadastrar.setText("CADASTRAR");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,8 +151,10 @@ public class CadastrarPacientes extends javax.swing.JFrame {
             }
         });
 
-        btnLimpa.setBackground(new java.awt.Color(102, 204, 255));
+        btnLimpa.setBackground(new java.awt.Color(0, 204, 204));
         btnLimpa.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnLimpa.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpa.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\clean.png")); // NOI18N
         btnLimpa.setText("LIMPAR CAMPOS");
         btnLimpa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +196,7 @@ public class CadastrarPacientes extends javax.swing.JFrame {
                             .addComponent(txtNome)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(BtnHOME)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                                 .addComponent(jLabel9)
                                 .addGap(120, 120, 120))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()

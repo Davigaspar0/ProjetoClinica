@@ -84,9 +84,13 @@ public class TelaEditarMedico extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("DFR - Clínica");
 
+        jButton3.setBackground(new java.awt.Color(0, 204, 204));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\voltar.png")); // NOI18N
         jButton3.setText("VOLTAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,9 +99,11 @@ public class TelaEditarMedico extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("O que vc quer Editar(Médico)?");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("NOME COMPLETO");
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +113,7 @@ public class TelaEditarMedico extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("SEXO");
 
         txtsexo.addActionListener(new java.awt.event.ActionListener() {
@@ -116,9 +123,11 @@ public class TelaEditarMedico extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("CRM");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("CPF");
 
         txtcpf.addActionListener(new java.awt.event.ActionListener() {
@@ -128,12 +137,15 @@ public class TelaEditarMedico extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("ENDEREÇO");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("TELEFONE");
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("RG");
 
         txtRg.addActionListener(new java.awt.event.ActionListener() {
@@ -143,6 +155,7 @@ public class TelaEditarMedico extends javax.swing.JFrame {
         });
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("SENHA");
 
         txtSenha.addActionListener(new java.awt.event.ActionListener() {
@@ -152,6 +165,7 @@ public class TelaEditarMedico extends javax.swing.JFrame {
         });
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("-Coloque o id do Paciente que quer editar");
         jLabel13.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
@@ -163,7 +177,10 @@ public class TelaEditarMedico extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 204, 204));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\clean.png")); // NOI18N
         jButton2.setText("LIMPAR CAMPOS");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +188,10 @@ public class TelaEditarMedico extends javax.swing.JFrame {
             }
         });
 
+        bTnEditar.setBackground(new java.awt.Color(0, 204, 204));
         bTnEditar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bTnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        bTnEditar.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\editar-texto.png")); // NOI18N
         bTnEditar.setText("EDITAR");
         bTnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +200,7 @@ public class TelaEditarMedico extends javax.swing.JFrame {
         });
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("ID");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -234,7 +255,7 @@ public class TelaEditarMedico extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel15)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtID, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
+                                        .addComponent(txtID, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE))
                                     .addComponent(txtsexo))))))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()

@@ -60,6 +60,7 @@ public class BuscarMedico extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CRM DO MÉDICO");
 
         txtCrmMed.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +69,10 @@ public class BuscarMedico extends javax.swing.JFrame {
             }
         });
 
+        BtnBuscar.setBackground(new java.awt.Color(0, 204, 204));
         BtnBuscar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnBuscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\plus.png")); // NOI18N
         BtnBuscar.setText("BUSCAR");
         BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +84,10 @@ public class BuscarMedico extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        BtnExcluir.setBackground(new java.awt.Color(0, 204, 204));
         BtnExcluir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnExcluir.setForeground(new java.awt.Color(255, 255, 255));
+        BtnExcluir.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\excluir.png")); // NOI18N
         BtnExcluir.setText("EXCLUIR");
         BtnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +95,10 @@ public class BuscarMedico extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(0, 204, 204));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\editar-texto.png")); // NOI18N
         jButton3.setText("EDITAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +106,10 @@ public class BuscarMedico extends javax.swing.JFrame {
             }
         });
 
+        BtnVoltar.setBackground(new java.awt.Color(0, 204, 204));
         BtnVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnVoltar.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\voltar.png")); // NOI18N
         BtnVoltar.setText("VOLTAR");
         BtnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +118,7 @@ public class BuscarMedico extends javax.swing.JFrame {
         });
 
         jLabel10.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("DFR - Clínica");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -118,9 +132,10 @@ public class BuscarMedico extends javax.swing.JFrame {
                             .addGap(29, 29, 29)
                             .addComponent(jLabel1)
                             .addGap(14, 14, 14)
-                            .addComponent(txtCrmMed, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(BtnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtCrmMed, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(BtnBuscar)
+                            .addGap(16, 16, 16))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addGap(21, 21, 21)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,7 +145,7 @@ public class BuscarMedico extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jButton3)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(BtnExcluir)))))
+                                    .addComponent(BtnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(103, 103, 103)
                         .addComponent(jLabel10)))

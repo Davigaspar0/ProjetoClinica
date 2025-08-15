@@ -47,7 +47,6 @@ view\MarcarConsulta$10.class
 view\MENUsecretaria$1.class
 view\CadastrarMedico$2.class
 view\TelaEditarMedico$6.class
-BuscarMedico.class
 DAO\GenericDAO.class
 view\TelaEditarMedico$11.class
 view\CadastrarPacientes$6.class
@@ -101,13 +100,13 @@ view\TelaEditarPaciente$2.class
 view\BuscarPacientes$1.class
 view\TelaEditarMedico$3.class
 view\TelaLoginAdm$4.class
+view\BuscarConsulta$4.class
 view\CadastrarPacientes$2.class
 view\TelaLoginAdm.class
 view\TelaCadastroSecretaria$4.class
 view\TelaLoginSecretaria$1.class
 DAO\AdmDAO.class
 view\TelaIniciall.class
-BuscarMedico$1.class
 view\MENUsecretaria$5.class
 view\TelaLoginMedico.class
 view\TelaCadastroSecretaria$3.class

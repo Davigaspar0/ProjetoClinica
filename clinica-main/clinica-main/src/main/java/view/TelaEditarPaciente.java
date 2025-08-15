@@ -69,12 +69,17 @@ public class TelaEditarPaciente extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("O que vc quer Editar(Paciente)?");
 
         jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("DFR - Clínica");
 
+        BtnVoltar.setBackground(new java.awt.Color(0, 204, 204));
         BtnVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnVoltar.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\voltar.png")); // NOI18N
         BtnVoltar.setText("VOLTAR");
         BtnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,21 +88,30 @@ public class TelaEditarPaciente extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("NOME COMPLETO");
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("ID");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("SEXO");
 
+        jLabel11.setBackground(new java.awt.Color(0, 204, 204));
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("RG");
 
+        jLabel8.setBackground(new java.awt.Color(0, 204, 204));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("ENDEREÇO");
 
+        jLabel13.setBackground(new java.awt.Color(0, 204, 204));
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("-Coloque o id do Paciente que quer editar");
         jLabel13.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
@@ -109,16 +123,23 @@ public class TelaEditarPaciente extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setBackground(new java.awt.Color(0, 204, 204));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("CONVENIO");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("TELEFONE");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("CPF");
 
+        BtnEditar.setBackground(new java.awt.Color(0, 204, 204));
         BtnEditar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnEditar.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\editar-texto.png")); // NOI18N
         BtnEditar.setText("EDITAR");
         BtnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,7 +147,10 @@ public class TelaEditarPaciente extends javax.swing.JFrame {
             }
         });
 
+        BtnLimpartudo.setBackground(new java.awt.Color(0, 204, 204));
         BtnLimpartudo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnLimpartudo.setForeground(new java.awt.Color(255, 255, 255));
+        BtnLimpartudo.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\clean.png")); // NOI18N
         BtnLimpartudo.setText("LIMPAR CAMPOS");
         BtnLimpartudo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

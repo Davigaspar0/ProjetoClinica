@@ -64,12 +64,15 @@ public class BuscarPacientes extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel6.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("DFR - Clínica");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("NOME COMPLETO ( 1° LETRA MAIUSCULA )");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("CPF DO PACIENTE");
 
         txtCpfPac.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +81,10 @@ public class BuscarPacientes extends javax.swing.JFrame {
             }
         });
 
+        Btnbuscar.setBackground(new java.awt.Color(0, 204, 204));
         Btnbuscar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Btnbuscar.setForeground(new java.awt.Color(255, 255, 255));
+        Btnbuscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\plus.png")); // NOI18N
         Btnbuscar.setText("BUSCAR");
         Btnbuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +96,10 @@ public class BuscarPacientes extends javax.swing.JFrame {
         textarea.setRows(5);
         jScrollPane1.setViewportView(textarea);
 
+        BtnEditar.setBackground(new java.awt.Color(0, 204, 204));
         BtnEditar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnEditar.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\editar-texto.png")); // NOI18N
         BtnEditar.setText("EDITAR");
         BtnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,7 +107,10 @@ public class BuscarPacientes extends javax.swing.JFrame {
             }
         });
 
+        BtnExcluir.setBackground(new java.awt.Color(0, 204, 204));
         BtnExcluir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnExcluir.setForeground(new java.awt.Color(255, 255, 255));
+        BtnExcluir.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\excluir.png")); // NOI18N
         BtnExcluir.setText("EXCLUIR");
         BtnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,9 +119,13 @@ public class BuscarPacientes extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("( OU )");
 
+        LIMPARCAMPOS.setBackground(new java.awt.Color(0, 204, 204));
         LIMPARCAMPOS.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LIMPARCAMPOS.setForeground(new java.awt.Color(255, 255, 255));
+        LIMPARCAMPOS.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\clean.png")); // NOI18N
         LIMPARCAMPOS.setText("LIMPAR CAMPOS");
         LIMPARCAMPOS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +133,10 @@ public class BuscarPacientes extends javax.swing.JFrame {
             }
         });
 
+        BtnvoltarMenu.setBackground(new java.awt.Color(0, 204, 204));
         BtnvoltarMenu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnvoltarMenu.setForeground(new java.awt.Color(255, 255, 255));
+        BtnvoltarMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\voltar.png")); // NOI18N
         BtnvoltarMenu.setText("VOLTAR");
         BtnvoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,35 +155,33 @@ public class BuscarPacientes extends javax.swing.JFrame {
                             .addGap(26, 26, 26)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtnomepac, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(159, 159, 159))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLabel3)
-                                                .addGap(35, 35, 35)
-                                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(txtCpfPac, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(113, 113, 113)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(LIMPARCAMPOS)
-                                            .addComponent(Btnbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel3)
+                                            .addGap(35, 35, 35)
+                                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtCpfPac, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(113, 113, 113)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(LIMPARCAMPOS)
+                                        .addComponent(Btnbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtnomepac, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(20, 20, 20)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jScrollPane1)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(BtnvoltarMenu)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(BtnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(BtnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(BtnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(BtnExcluir)))
+                            .addGap(7, 7, 7)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
                         .addComponent(jLabel6)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,67 +396,21 @@ public class BuscarPacientes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnEditar;
     private javax.swing.JButton BtnExcluir;
-    private javax.swing.JButton BtnLimpar;
-    private javax.swing.JButton BtnLimpar1;
     private javax.swing.JButton Btnbuscar;
     private javax.swing.JButton BtnvoltarMenu;
     private javax.swing.JButton LIMPARCAMPOS;
-    private javax.swing.JButton btnCadastrar;
-    private javax.swing.JButton btnCadastrar1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea textarea;
-    private javax.swing.JTextField txtCpF;
-    private javax.swing.JTextField txtCpF1;
     private javax.swing.JTextField txtCpfPac;
-    private javax.swing.JTextField txtCrm;
-    private javax.swing.JTextField txtCrm1;
-    private javax.swing.JTextField txtEndereço;
-    private javax.swing.JTextField txtEndereço1;
-    private javax.swing.JTextField txtNome;
-    private javax.swing.JTextField txtNome1;
-    private javax.swing.JTextField txtRg;
-    private javax.swing.JTextField txtRg1;
-    private javax.swing.JTextField txtSenha;
-    private javax.swing.JTextField txtSenha1;
-    private javax.swing.JTextField txtSexo;
-    private javax.swing.JTextField txtSexo1;
-    private javax.swing.JTextField txtTelefone;
-    private javax.swing.JTextField txtTelefone1;
     private javax.swing.JTextField txtnomepac;
     // End of variables declaration//GEN-END:variables
 }

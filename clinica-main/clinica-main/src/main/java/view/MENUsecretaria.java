@@ -44,10 +44,13 @@ public class MENUsecretaria extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("DFR - Clínica");
 
-        CadMed.setBackground(new java.awt.Color(102, 204, 255));
+        CadMed.setBackground(new java.awt.Color(0, 204, 204));
         CadMed.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        CadMed.setForeground(new java.awt.Color(255, 255, 255));
+        CadMed.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\local-na-rede-internet.png")); // NOI18N
         CadMed.setText("CADASTRAR MÉDICOS");
         CadMed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,8 +58,10 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        CadPaci.setBackground(new java.awt.Color(102, 204, 255));
+        CadPaci.setBackground(new java.awt.Color(0, 204, 204));
         CadPaci.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        CadPaci.setForeground(new java.awt.Color(255, 255, 255));
+        CadPaci.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\local-na-rede-internet.png")); // NOI18N
         CadPaci.setText("CADASTRAR PACIENTES");
         CadPaci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,8 +69,10 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        BuscarMedicos.setBackground(new java.awt.Color(102, 204, 255));
+        BuscarMedicos.setBackground(new java.awt.Color(0, 204, 204));
         BuscarMedicos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BuscarMedicos.setForeground(new java.awt.Color(255, 255, 255));
+        BuscarMedicos.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\plus.png")); // NOI18N
         BuscarMedicos.setText("BUSCAR MÉDICOS");
         BuscarMedicos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,8 +80,10 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        BuscarPac.setBackground(new java.awt.Color(102, 204, 255));
+        BuscarPac.setBackground(new java.awt.Color(0, 204, 204));
         BuscarPac.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BuscarPac.setForeground(new java.awt.Color(255, 255, 255));
+        BuscarPac.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\plus.png")); // NOI18N
         BuscarPac.setText("BUSCAR PACIENTES");
         BuscarPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,8 +91,10 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        MarcarCons.setBackground(new java.awt.Color(102, 204, 255));
+        MarcarCons.setBackground(new java.awt.Color(0, 204, 204));
         MarcarCons.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MarcarCons.setForeground(new java.awt.Color(255, 255, 255));
+        MarcarCons.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\consultando.png")); // NOI18N
         MarcarCons.setText("MARCAR CONSULTA");
         MarcarCons.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,8 +102,10 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        BuscarConsu.setBackground(new java.awt.Color(102, 204, 255));
+        BuscarConsu.setBackground(new java.awt.Color(0, 204, 204));
         BuscarConsu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BuscarConsu.setForeground(new java.awt.Color(255, 255, 255));
+        BuscarConsu.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\consultando.png")); // NOI18N
         BuscarConsu.setText("BUSCAR CONSULTA");
         BuscarConsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,8 +113,10 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
-        BtnSair.setBackground(new java.awt.Color(102, 204, 255));
+        BtnSair.setBackground(new java.awt.Color(0, 204, 204));
         BtnSair.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnSair.setForeground(new java.awt.Color(255, 255, 255));
+        BtnSair.setIcon(new javax.swing.ImageIcon("C:\\Users\\davio\\Downloads\\voltar.png")); // NOI18N
         BtnSair.setText("SAIR");
         BtnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,11 +145,11 @@ public class MENUsecretaria extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(BtnSair)
-                                .addGap(20, 20, 20))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
-                                .addGap(45, 45, 45))))))
+                                .addGap(45, 45, 45))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(BtnSair)
+                                .addGap(19, 19, 19))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,12 +166,13 @@ public class MENUsecretaria extends javax.swing.JFrame {
                         .addComponent(BuscarPac))
                     .addComponent(jLabel9))
                 .addGap(18, 18, 18)
-                .addComponent(MarcarCons)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BuscarConsu)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(MarcarCons)
+                        .addGap(18, 18, 18)
+                        .addComponent(BuscarConsu))
                     .addComponent(BtnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16))
+                .addGap(10, 10, 10))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -190,17 +206,11 @@ public class MENUsecretaria extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CadPaciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadPaciActionPerformed
-        CadastrarPacientes cad = new CadastrarPacientes();
+    private void BtnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSairActionPerformed
+        TelaIniciall cad = new TelaIniciall();
         cad.setVisible(true);
         dispose();
-    }//GEN-LAST:event_CadPaciActionPerformed
-
-    private void BuscarMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarMedicosActionPerformed
-        BuscarMedico cad5 = new BuscarMedico();
-        cad5.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_BuscarMedicosActionPerformed
+    }//GEN-LAST:event_BtnSairActionPerformed
 
     private void BuscarConsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarConsuActionPerformed
         BuscarConsulta cad5 = new BuscarConsulta();
@@ -208,29 +218,35 @@ public class MENUsecretaria extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_BuscarConsuActionPerformed
 
-    private void CadMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadMedActionPerformed
-       CadastrarMedico cad = new CadastrarMedico();
-       cad.setVisible(true);
+    private void MarcarConsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarcarConsActionPerformed
+        MarcarConsulta cad = new MarcarConsulta();
+        cad.setVisible(true);
         dispose();
-    }//GEN-LAST:event_CadMedActionPerformed
+    }//GEN-LAST:event_MarcarConsActionPerformed
 
     private void BuscarPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarPacActionPerformed
-       BuscarPacientes cad = new BuscarPacientes();
+        BuscarPacientes cad = new BuscarPacientes();
         cad.setVisible(true);
         dispose();
     }//GEN-LAST:event_BuscarPacActionPerformed
 
-    private void MarcarConsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarcarConsActionPerformed
-        MarcarConsulta cad = new MarcarConsulta();
-       cad.setVisible(true);
+    private void BuscarMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarMedicosActionPerformed
+        BuscarMedico cad5 = new BuscarMedico();
+        cad5.setVisible(true);
         dispose();
-    }//GEN-LAST:event_MarcarConsActionPerformed
+    }//GEN-LAST:event_BuscarMedicosActionPerformed
 
-    private void BtnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSairActionPerformed
-        TelaIniciall cad = new TelaIniciall();
+    private void CadPaciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadPaciActionPerformed
+        CadastrarPacientes cad = new CadastrarPacientes();
         cad.setVisible(true);
         dispose();
-    }//GEN-LAST:event_BtnSairActionPerformed
+    }//GEN-LAST:event_CadPaciActionPerformed
+
+    private void CadMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadMedActionPerformed
+        CadastrarMedico cad = new CadastrarMedico();
+        cad.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_CadMedActionPerformed
 
     /**
      * @param args the command line arguments
