@@ -28,6 +28,7 @@ public class MENUsecretaria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         CadMed = new javax.swing.JButton();
@@ -40,9 +41,13 @@ public class MENUsecretaria extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
+
         jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
         jLabel9.setText("DFR - Clínica");
 
+        CadMed.setBackground(new java.awt.Color(102, 204, 255));
+        CadMed.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         CadMed.setText("CADASTRAR MÉDICOS");
         CadMed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +55,8 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
+        CadPaci.setBackground(new java.awt.Color(102, 204, 255));
+        CadPaci.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         CadPaci.setText("CADASTRAR PACIENTES");
         CadPaci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +64,8 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
+        BuscarMedicos.setBackground(new java.awt.Color(102, 204, 255));
+        BuscarMedicos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BuscarMedicos.setText("BUSCAR MÉDICOS");
         BuscarMedicos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +73,8 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
+        BuscarPac.setBackground(new java.awt.Color(102, 204, 255));
+        BuscarPac.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BuscarPac.setText("BUSCAR PACIENTES");
         BuscarPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +82,8 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
+        MarcarCons.setBackground(new java.awt.Color(102, 204, 255));
+        MarcarCons.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MarcarCons.setText("MARCAR CONSULTA");
         MarcarCons.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +91,8 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
+        BuscarConsu.setBackground(new java.awt.Color(102, 204, 255));
+        BuscarConsu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BuscarConsu.setText("BUSCAR CONSULTA");
         BuscarConsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +100,7 @@ public class MENUsecretaria extends javax.swing.JFrame {
             }
         });
 
+        BtnSair.setBackground(new java.awt.Color(102, 204, 255));
         BtnSair.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnSair.setText("SAIR");
         BtnSair.addActionListener(new java.awt.event.ActionListener() {
@@ -102,30 +118,28 @@ public class MENUsecretaria extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CadPaci)
-                            .addComponent(CadMed))
+                            .addComponent(CadMed)
+                            .addComponent(CadPaci))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BuscarMedicos)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(BuscarConsu)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BuscarPac)
-                                    .addComponent(MarcarCons))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                            .addComponent(BuscarPac)
+                            .addComponent(MarcarCons)
+                            .addComponent(BuscarConsu))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(37, 37, 37))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(BtnSair)
-                                .addGap(15, 15, 15))))))
+                                .addGap(20, 20, 20))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(45, 45, 45))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CadMed)
                 .addGap(18, 18, 18)
                 .addComponent(CadPaci)
@@ -138,25 +152,39 @@ public class MENUsecretaria extends javax.swing.JFrame {
                     .addComponent(jLabel9))
                 .addGap(18, 18, 18)
                 .addComponent(MarcarCons)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(BuscarConsu))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(BtnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(10, Short.MAX_VALUE))
+                    .addComponent(BuscarConsu)
+                    .addComponent(BtnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16))
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -249,5 +277,6 @@ public class MENUsecretaria extends javax.swing.JFrame {
     private javax.swing.JButton MarcarCons;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
