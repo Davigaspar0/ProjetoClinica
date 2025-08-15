@@ -86,6 +86,7 @@ public class TelaEditarMedico extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
         jLabel9.setText("DFR - Clínica");
 
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setText("VOLTAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,7 +234,7 @@ public class TelaEditarMedico extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel15)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtID))
+                                        .addComponent(txtID, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
                                     .addComponent(txtsexo))))))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -245,7 +246,7 @@ public class TelaEditarMedico extends javax.swing.JFrame {
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addComponent(bTnEditar)
-                .addGap(64, 64, 64))
+                .addGap(32, 32, 32))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -347,10 +348,6 @@ public class TelaEditarMedico extends javax.swing.JFrame {
 
     private void bTnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTnEditarActionPerformed
 
-              
-        
-        
-
        String nome,senha,cpf,rg,endereço,telefone,sexo,crm;
        
        int id = Integer.parseInt(txtID.getText());
@@ -413,7 +410,7 @@ public class TelaEditarMedico extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomeActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        BuscarMedicos cad = new BuscarMedicos();
+        BuscarMedico cad = new BuscarMedico();
         cad.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed

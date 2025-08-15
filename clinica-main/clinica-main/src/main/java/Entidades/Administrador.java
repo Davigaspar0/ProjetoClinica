@@ -12,10 +12,8 @@ public class Administrador {
     
     private int id;
     private String nome;
-    private String login;
-    private String Senha;
     
-
+    private String Senha;
 
     /**
      * @return the id
@@ -46,35 +44,20 @@ public class Administrador {
     }
 
     /**
-     * @return the login
-     */
-    public String getLogin() {
-        return login;
-    }
-
-    /**
-     * @param login the login to set
-     */
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    /**
-     * @return the senha
+     * @return the Senha
      */
     public String getSenha() {
         return Senha;
     }
 
     /**
-     * @param senha the senha to set
+     * @param Senha the Senha to set
      */
-    public void setSenha(String senha) {
-        this.Senha = senha;
+    public void setSenha(String Senha) {
+        this.Senha = Senha;
     }
+    
+
 }
-    /**
-     * @return the senha
-     */
-
-
+    
+   

@@ -195,7 +195,7 @@ public class TelaIniciall extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnSairActionPerformed
 
     private void BtnAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAdmActionPerformed
-        TelaCadastroSecretaria cad3 = new TelaCadastroSecretaria();
+        TelaLoginAdm cad3 = new TelaLoginAdm();
                cad3.setVisible(true);
                dispose();
     }//GEN-LAST:event_BtnAdmActionPerformed
@@ -207,7 +207,9 @@ public class TelaIniciall extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnSecActionPerformed
 
     private void BtnMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMedActionPerformed
-        // TODO add your handling code here:
+         TelaLoginMedico cad2 = new TelaLoginMedico();
+               cad2.setVisible(true);
+               dispose();
     }//GEN-LAST:event_BtnMedActionPerformed
 
     /**if (txtID.getText().equals("") ){

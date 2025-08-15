@@ -4,6 +4,14 @@
  */
 package view;
 
+import DAO.MedicosDAO;
+import DAO.PacienteDAO;
+import Entidades.Medicos;
+import Entidades.Paciente;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author davio
@@ -26,21 +34,207 @@ public class BuscarMedico extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtCrmMed = new javax.swing.JTextField();
+        BtnBuscar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        BtnExcluir = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        BtnVoltar = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+
+        jTextField1.setText("jTextField1");
+
+        jButton2.setText("jButton2");
+
+        jButton4.setText("jButton4");
+
+        jLabel9.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel9.setText("DFR - Clínica");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("CRM DO MÉDICO");
+
+        txtCrmMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCrmMedActionPerformed(evt);
+            }
+        });
+
+        BtnBuscar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnBuscar.setText("BUSCAR");
+        BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBuscarActionPerformed(evt);
+            }
+        });
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        BtnExcluir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnExcluir.setText("EXCLUIR");
+        BtnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnExcluirActionPerformed(evt);
+            }
+        });
+
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton3.setText("EDITAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        BtnVoltar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnVoltar.setText("VOLTAR");
+        BtnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnVoltarActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel10.setText("DFR - Clínica");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(29, 29, 29)
+                            .addComponent(jLabel1)
+                            .addGap(14, 14, 14)
+                            .addComponent(txtCrmMed, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(BtnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(21, 21, 21)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(BtnVoltar)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(BtnExcluir)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(jLabel10)))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel10)
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtCrmMed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnExcluir)
+                    .addComponent(jButton3)
+                    .addComponent(BtnVoltar))
+                .addGap(22, 22, 22))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtCrmMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCrmMedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCrmMedActionPerformed
+
+    private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
+        String crm;
+       
+       crm = txtCrmMed.getText();
+      
+        
+       Medicos med = new Medicos();
+       
+       med.setCrm(crm);
+       
+        
+       MedicosDAO objMedicosDAO = new MedicosDAO();
+       
+    try { 
+        
+        jTextArea1.setText("");
+        
+        for (Medicos c :  objMedicosDAO.getAllMedicosPorCrm(med)) {
+            jTextArea1.append(
+                
+            "ID: " + c.getId() + "\n" +
+            "Nome: " + c.getNome_medico()+ "\n" +
+            "CPF: " + c.getCpf() + "\n" +
+            "Telefone: " + c.getTelefone() + "\n" +
+            "RG: " + c.getRg() + "\n" +
+            "Sexo: " + c.getSexo() + "\n" +
+            "Crm: " + c.getCrm() +
+            "\n"
+            );
+                    
+           } 
+        } catch (Exception ex) {
+              Logger.getLogger(BuscarMedico.class.getName()).log(Level.SEVERE, null, ex);
+              jTextArea1.append("Erro ao consultar funcionários: " + ex.getMessage());
+    }
+                                  
+    }//GEN-LAST:event_BtnBuscarActionPerformed
+
+    private void BtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnExcluirActionPerformed
+        String crm ;
+      
+      crm = txtCrmMed.getText();
+      
+      Medicos ObjExcluirmed = new Medicos();
+      
+      ObjExcluirmed.setCrm(crm);
+      
+      
+      MedicosDAO medDAO = new MedicosDAO();
+      
+       try {
+            medDAO.deleteMedicos(ObjExcluirmed);
+            
+            jTextArea1.setText("");
+            jTextArea1.append("Medico Deletado do sistema!\n");
+        } catch (SQLException ex) {
+            Logger.getLogger(BuscarMedico.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                                        
+    }//GEN-LAST:event_BtnExcluirActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        TelaEditarMedico cad9234 = new TelaEditarMedico();
+               cad9234.setVisible(true);
+               dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void BtnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVoltarActionPerformed
+        MENUsecretaria cad9234 = new MENUsecretaria();
+               cad9234.setVisible(true);
+               dispose();
+    }//GEN-LAST:event_BtnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +272,18 @@ public class BuscarMedico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnBuscar;
+    private javax.swing.JButton BtnExcluir;
+    private javax.swing.JButton BtnVoltar;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtCrmMed;
     // End of variables declaration//GEN-END:variables
 }

@@ -197,7 +197,7 @@ public class MENUsecretaria extends javax.swing.JFrame {
     }//GEN-LAST:event_CadPaciActionPerformed
 
     private void BuscarMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarMedicosActionPerformed
-        BuscarMedicos cad5 = new BuscarMedicos();
+        BuscarMedico cad5 = new BuscarMedico();
         cad5.setVisible(true);
         dispose();
     }//GEN-LAST:event_BuscarMedicosActionPerformed

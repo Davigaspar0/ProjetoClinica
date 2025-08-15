@@ -10,15 +10,32 @@ import java.util.List;
 
 public class MedicosDAO  extends GenericDAO
 {
- Connection cn;
+ 
+    
+ 
+ public Integer Loginmed(Medicos Medicos) throws SQLException {
+         
+        String query = "SELECT * FROM medicos WHERE nome_medico = ? AND senha_de_acesso = ?";
+    ResultSet rs = executeQuery(query, Medicos.getNome_medico(), Medicos.getSenha_de_acesso());
+
+    if (rs.next()) {
+        return rs.getInt("id"); // pega o ID do banco
+    } else {
+        return null;
+    }
+
+    
+    }
+ 
+ 
     
     
-    public void getMedicos (int crmMedico) throws SQLException
+    public void getMedicos (int crm) throws SQLException
     {
         
         
         String query = "SELECT * FROM medicos where crm = ?";
-        executeQuery(query, crmMedico);
+        executeQuery(query, crm);
         //rs =  executeQuery("select * from medicos where crm like ?",medicos.getCrm()+"%");
     }
     

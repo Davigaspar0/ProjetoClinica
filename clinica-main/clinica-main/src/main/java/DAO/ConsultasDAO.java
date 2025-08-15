@@ -30,9 +30,10 @@ package DAO;
             private Consultas BUSCARConsultas(ResultSet rs) throws SQLException {
             Consultas retorno = new Consultas();
             
-            retorno.setId_consulta(Integer.parseInt(rs.getString("id")));
-            retorno.setNome_medico(rs.getString("nome_medico"));
+           
+            
             retorno.setNome_paciente(rs.getString("nome_paciente"));
+            retorno.setNome_medico(rs.getString("nome_medico"));
             retorno.setData(rs.getString("data"));
             retorno.setHora(rs.getString("hora"));
            
@@ -46,7 +47,7 @@ package DAO;
         public Integer addConsultas(Consultas consultas) throws SQLException
         {
             String query = "INSERT INTO consultas(nome_medico, nome_paciente, data, hora) VALUES (?,?,?,?)";
-            executeComand(query, consultas.getNome_paciente(), consultas.getNome_medico(),consultas.getData(), consultas.getHora());        
+            executeComand(query, consultas.getNome_medico(), consultas.getNome_paciente(), consultas.getData(), consultas.getHora());        
             return consultas.getId_consulta();
             
         }

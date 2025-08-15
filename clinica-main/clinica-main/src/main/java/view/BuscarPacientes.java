@@ -336,8 +336,8 @@ public class BuscarPacientes extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnvoltarMenuActionPerformed
 
     private void BtnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditarActionPerformed
-         //TelaEditarPacientes cad = new TelaEditarPacientes();
-        //cad.setVisible(true);
+         TelaEditarPaciente cad = new TelaEditarPaciente();
+        cad.setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnEditarActionPerformed
 
