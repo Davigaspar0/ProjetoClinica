@@ -390,7 +390,14 @@ public class MarcarConsulta extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomePacienteActionPerformed
 
     private void BUTlimparcampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BUTlimparcampoActionPerformed
-        // TODO add your handling code here:
+         txtCpfCliente.setText("");
+      txtCrmMedico.setText("");
+      txtData.setText("");
+      txtHora.setText("");
+      txtIdMedico.setText("");
+      txtIdPaciente.setText("");
+      txtNomeMedico.setText("");
+      txtNomePaciente.setText("");
     }//GEN-LAST:event_BUTlimparcampoActionPerformed
 
     private void BTNbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNbuscarActionPerformed

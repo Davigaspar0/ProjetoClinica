@@ -14,6 +14,7 @@ public class Consultas {
     private String nome_medico;
     private String data;
     private String hora;
+    
 
     /**
      * @return the id_consulta

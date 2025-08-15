@@ -75,16 +75,16 @@ public class MedicosDAO  extends GenericDAO
     
     public void updateMedicos(Medicos medicos) throws SQLException
     {
-        String query = "UPDATE medicos SET crm = ?, nome_medico = ?, cpf = ?, rg = ?, telefone = ?, sexo = ? WHERE id =?";
-        executeComand(query, medicos.getCrm(), medicos.getNome_medico(), medicos.getCpf(), medicos.getRg(), medicos.getTelefone(), medicos.getSexo(), medicos.getId());        
+        String query = "UPDATE medicos SET crm = ?, nome_medico = ?, cpf = ?, rg = ?, telefone = ?, sexo = ?, endereco = ?, senha_de_acesso = ? WHERE id =?";
+        executeComand(query, medicos.getCrm(), medicos.getNome_medico(), medicos.getCpf(), medicos.getRg(), medicos.getTelefone(), medicos.getSexo(),medicos.getSenha_de_acesso(),medicos.getEndereco(), medicos.getId());        
         
     }
     
-    public void deleteMedicos(Medicos medicos ) throws SQLException
+    public void deleteMedicos(Medicos medicos) throws SQLException
     {
        
-        String query = "DELETE FROM medicos WHERE id = ? ";
-        executeComand(query, medicos.getId());
+        String query = "DELETE FROM medicos WHERE crm = ? ";
+        executeComand(query, medicos.getCrm());
     
     }
 

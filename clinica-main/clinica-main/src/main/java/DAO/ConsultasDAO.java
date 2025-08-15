@@ -14,7 +14,7 @@ package DAO;
     public class ConsultasDAO extends GenericDAO {
         
         
-        public List<Consultas> getAllConsultas() throws SQLException 
+        public List<Consultas> getAllConsultas(Consultas crm) throws SQLException 
         {
             List<Consultas> consultas = new LinkedList<>();
             
@@ -30,9 +30,9 @@ package DAO;
             private Consultas BUSCARConsultas(ResultSet rs) throws SQLException {
             Consultas retorno = new Consultas();
             
-            //retorno.setId(Integer.parseInt(rs.getString("id")));
-            //retorno.setNome_medico(rs.getInt("id_med"));
-            //retorno.setNome_paciente(rs.getInt("id_pac"));
+            retorno.setId_consulta(Integer.parseInt(rs.getString("id")));
+            retorno.setNome_medico(rs.getString("nome_medico"));
+            retorno.setNome_paciente(rs.getString("nome_paciente"));
             retorno.setData(rs.getString("data"));
             retorno.setHora(rs.getString("hora"));
            
