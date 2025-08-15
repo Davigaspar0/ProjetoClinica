@@ -274,79 +274,75 @@ public class CadastrarPacientes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnHOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHOMEActionPerformed
-        MENUsecretaria cad98 = new MENUsecretaria();
-               cad98.setVisible(true);
-               dispose();
-    }//GEN-LAST:event_BtnHOMEActionPerformed
-
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
+    private void btnLimpaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpaActionPerformed
+        txtNome.setText("");
+        txtSexo.setText("");
+        txtEndereço.setText("");
+        txtConvenio.setText("");
+        txtTelefone.setText("");
+        txtCpf.setText("");
+        txtRg.setText("");
+    }//GEN-LAST:event_btnLimpaActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-       String nome,convenio,cpf,rg,endereço,telefone,sexo;
-       
-       nome = txtNome.getText();
-       convenio = txtConvenio.getText();
-       cpf = txtCpf.getText();
-       rg = txtRg.getText();
-       endereço = txtEndereço.getText();
-       telefone = txtEndereço.getText();
-       sexo = txtSexo.getText();
-       
-       Paciente caranovo = new Paciente();
-       
-       caranovo.setNome(nome);
-       caranovo.setConvenio(convenio);
-       caranovo.setEndereco(endereço);
-       caranovo.setCpf(cpf);
-       caranovo.setRg(rg);
-       caranovo.setSexo(sexo);
-       caranovo.setTelefone(telefone);
-       
-    PacienteDAO objPacienteDAO = new PacienteDAO();
-    
-     try {
-           
-           objPacienteDAO.addPaciente(caranovo);
-           
-           JOptionPane.showMessageDialog(null, "Cadastrado com sucesso");
-       } catch (SQLException ex) {
-           Logger.getLogger(CadastrarPacientes.class.getName()).log(Level.SEVERE, null, ex);
+        String nome,convenio,cpf,rg,endereço,telefone,sexo;
 
-       }
-       
-       
-                                                         
-               
+        nome = txtNome.getText();
+        convenio = txtConvenio.getText();
+        cpf = txtCpf.getText();
+        rg = txtRg.getText();
+        endereço = txtEndereço.getText();
+        telefone = txtEndereço.getText();
+        sexo = txtSexo.getText();
+
+        Paciente caranovo = new Paciente();
+
+        caranovo.setNome(nome);
+        caranovo.setConvenio(convenio);
+        caranovo.setEndereco(endereço);
+        caranovo.setCpf(cpf);
+        caranovo.setRg(rg);
+        caranovo.setSexo(sexo);
+        caranovo.setTelefone(telefone);
+
+        PacienteDAO objPacienteDAO = new PacienteDAO();
+
+        try {
+
+            objPacienteDAO.addPaciente(caranovo);
+
+            JOptionPane.showMessageDialog(null, "Cadastrado com sucesso");
+        } catch (SQLException ex) {
+            Logger.getLogger(CadastrarPacientes.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
     }//GEN-LAST:event_btnCadastrarActionPerformed
-
-    private void txtSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSexoActionPerformed
-
-    private void txtTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTelefoneActionPerformed
-
-    private void txtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCpfActionPerformed
 
     private void txtEndereçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEndereçoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEndereçoActionPerformed
 
-    private void btnLimpaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpaActionPerformed
-       txtNome.setText("");
-      txtSexo.setText("");
-      txtEndereço.setText("");
-      txtConvenio.setText("");
-      txtTelefone.setText("");
-      txtCpf.setText("");
-      txtRg.setText("");
-    }//GEN-LAST:event_btnLimpaActionPerformed
+    private void txtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCpfActionPerformed
+
+    private void txtTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefoneActionPerformed
+
+    private void txtSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSexoActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
+
+    private void BtnHOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnHOMEActionPerformed
+        MENUsecretaria cad98 = new MENUsecretaria();
+        cad98.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_BtnHOMEActionPerformed
 
     /**
      * @param args the command line arguments

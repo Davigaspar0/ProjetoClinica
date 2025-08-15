@@ -43,14 +43,17 @@ public class TelaIniciall extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("DFR - Clínica");
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Segoe Script", 2, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Seja Bem Vindo à  DFR!");
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Escolha sua área");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -81,11 +84,12 @@ public class TelaIniciall extends javax.swing.JFrame {
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(153, 153, 153), new java.awt.Color(204, 204, 204)));
 
         BtnMed.setBackground(new java.awt.Color(102, 204, 255));
         BtnMed.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnMed.setForeground(new java.awt.Color(255, 255, 255));
         BtnMed.setText("MÉDICO");
         BtnMed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +99,7 @@ public class TelaIniciall extends javax.swing.JFrame {
 
         BtnAdm.setBackground(new java.awt.Color(102, 204, 255));
         BtnAdm.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnAdm.setForeground(new java.awt.Color(255, 255, 255));
         BtnAdm.setText("ADMINISTRADOR");
         BtnAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +109,7 @@ public class TelaIniciall extends javax.swing.JFrame {
 
         BtnSec.setBackground(new java.awt.Color(102, 204, 255));
         BtnSec.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnSec.setForeground(new java.awt.Color(255, 255, 255));
         BtnSec.setText("SECRETARIA");
         BtnSec.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +119,7 @@ public class TelaIniciall extends javax.swing.JFrame {
 
         BtnSair.setBackground(new java.awt.Color(102, 204, 255));
         BtnSair.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnSair.setForeground(new java.awt.Color(255, 255, 255));
         BtnSair.setText("SAIR");
         BtnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
