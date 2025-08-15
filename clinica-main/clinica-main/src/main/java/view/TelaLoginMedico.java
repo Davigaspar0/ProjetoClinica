@@ -160,9 +160,8 @@ public class TelaLoginMedico extends javax.swing.JFrame {
             objmedDAOLOGIN.Loginmed(objmedLogin );
            if (id != null){
                
-            TelaCadastroSecretaria cad2 = new TelaCadastroSecretaria();
-               cad2.setVisible(true);
-               dispose();
+                    JOptionPane.showMessageDialog(null, "DÍSPONIVE NA PROXIMA ATUALIZAÇÃO!");
+
                
              
            }else {

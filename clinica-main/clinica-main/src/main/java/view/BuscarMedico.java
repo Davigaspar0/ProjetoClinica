@@ -199,12 +199,14 @@ public class BuscarMedico extends javax.swing.JFrame {
             jTextArea1.append(
                 
             "ID: " + c.getId() + "\n" +
+            "Crm: " + c.getCrm() + "\n" + 
             "Nome: " + c.getNome_medico()+ "\n" +
-            "CPF: " + c.getCpf() + "\n" +
+            "Sexo: " + c.getSexo() + "\n" +
             "Telefone: " + c.getTelefone() + "\n" +
             "RG: " + c.getRg() + "\n" +
-            "Sexo: " + c.getSexo() + "\n" +
-            "Crm: " + c.getCrm() +
+            "CPF: " + c.getCpf() + "\n" +
+            
+            
             "\n"
             );
                     

@@ -263,9 +263,9 @@ public class BuscarPacientes extends javax.swing.JFrame {
             "ID: " + c.getId() + "\n" +
             "Nome: " + c.getNome() + "\n" +
             "Endereço: " + c.getEndereco() + "\n" +
+             "RG: " + c.getRg() + "\n" +
+             "Telefone: " + c.getTelefone() + "\n" +
             "CPF: " + c.getCpf() + "\n" +
-            "Telefone: " + c.getTelefone() + "\n" +
-            "RG: " + c.getRg() + "\n" +
             "Sexo: " + c.getSexo() + "\n" +
             "Convênio: " + c.getConvenio() + "\n" +
             "\n"

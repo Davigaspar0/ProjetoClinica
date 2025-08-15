@@ -309,7 +309,7 @@ public class CadastrarPacientes extends javax.swing.JFrame {
         cpf = txtCpf.getText();
         rg = txtRg.getText();
         endereço = txtEndereço.getText();
-        telefone = txtEndereço.getText();
+        telefone = txtTelefone.getText();
         sexo = txtSexo.getText();
 
         Paciente caranovo = new Paciente();

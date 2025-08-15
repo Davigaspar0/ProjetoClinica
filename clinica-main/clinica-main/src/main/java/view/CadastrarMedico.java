@@ -54,9 +54,9 @@ public class CadastrarMedico extends javax.swing.JFrame {
         txtCrm = new javax.swing.JTextField();
         txtEndereço = new javax.swing.JTextField();
         txtRg = new javax.swing.JTextField();
-        txtCpF = new javax.swing.JTextField();
-        txtTelefone = new javax.swing.JTextField();
         txtSexo = new javax.swing.JTextField();
+        txtTelefone = new javax.swing.JTextField();
+        txtCpf = new javax.swing.JTextField();
         BtnLimpar = new javax.swing.JButton();
         btnCadastrar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
@@ -110,15 +110,21 @@ public class CadastrarMedico extends javax.swing.JFrame {
             }
         });
 
+        txtSexo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSexoActionPerformed(evt);
+            }
+        });
+
         txtTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTelefoneActionPerformed(evt);
             }
         });
 
-        txtSexo.addActionListener(new java.awt.event.ActionListener() {
+        txtCpf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSexoActionPerformed(evt);
+                txtCpfActionPerformed(evt);
             }
         });
 
@@ -212,7 +218,7 @@ public class CadastrarMedico extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(12, 12, 12)
-                                            .addComponent(txtCpF, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addGap(19, 19, 19)
@@ -222,7 +228,7 @@ public class CadastrarMedico extends javax.swing.JFrame {
                                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtSexo)
+                                .addComponent(txtCpf)
                                 .addComponent(txtEndereço)
                                 .addComponent(txtTelefone)))
                         .addComponent(txtNome)
@@ -258,7 +264,7 @@ public class CadastrarMedico extends javax.swing.JFrame {
                     .addComponent(txtEndereço, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCpF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
@@ -266,7 +272,7 @@ public class CadastrarMedico extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtRg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,11 +314,11 @@ public class CadastrarMedico extends javax.swing.JFrame {
 
     private void BtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLimparActionPerformed
        txtNome.setText("");
-       txtCpF.setText("");
+       txtSexo.setText("");
        txtCrm.setText("");
        txtEndereço.setText("");
        txtSenha.setText("");
-       txtSexo.setText("");
+       txtCpf.setText("");
        txtTelefone.setText("");
        txtRg.setText("");
     }//GEN-LAST:event_BtnLimparActionPerformed
@@ -329,15 +335,15 @@ public class CadastrarMedico extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCrmActionPerformed
 
-    private void txtSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexoActionPerformed
+    private void txtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtSexoActionPerformed
+    }//GEN-LAST:event_txtCpfActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         String Nome,Cpf,Sexo,Endereço,Senha,Telefone,Crm,rg;
       
        Nome = txtNome.getText(); //davi
-       Cpf = txtCpF.getText();
+       Cpf = txtCpf.getText();
        Sexo = txtSexo.getText();
        Endereço = txtEndereço.getText();
        Senha = txtSenha.getText();
@@ -375,6 +381,10 @@ public class CadastrarMedico extends javax.swing.JFrame {
         cad99.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void txtSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSexoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -432,7 +442,7 @@ public class CadastrarMedico extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField txtCpF;
+    private javax.swing.JTextField txtCpf;
     private javax.swing.JTextField txtCrm;
     private javax.swing.JTextField txtEndereço;
     private javax.swing.JTextField txtNome;
