@@ -110,6 +110,7 @@ DAO\AdmDAO.class
 view\TelaIniciall.class
 view\MENUsecretaria$5.class
 view\TelaLoginMedico.class
+Entidades\Consultas.class
 view\TelaCadastroSecretaria$3.class
 view\TelaEditarPaciente$1.class
 Entidades\Medicos.class
