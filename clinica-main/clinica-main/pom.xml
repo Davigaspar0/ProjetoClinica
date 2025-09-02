@@ -14,10 +14,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <main.class>com.mycompany.Clinica.view.TelaIniciall</main.class>
+        <!-- Classe principal corrigida -->
+        <main.class>view.TelaIniciall</main.class>
     </properties>
 
     <build>
+         <finalName>Clinica DFR</finalName>
         <plugins>
             <!-- Compilador com preview features -->
             <plugin>
