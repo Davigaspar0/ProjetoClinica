@@ -188,6 +188,7 @@ public class BuscarConsulta extends javax.swing.JFrame {
         
        
         txtCRM.setText(c.getCrm());
+       
         break; 
     }
     } catch (Exception ex) {

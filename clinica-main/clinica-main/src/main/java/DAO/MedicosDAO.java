@@ -30,7 +30,7 @@ public class MedicosDAO  extends GenericDAO
  
     
     
-    public void getMedicos (int crm) throws SQLException
+    public void getMedicos (Medicos crm) throws SQLException
     {
         
         
@@ -54,7 +54,7 @@ public class MedicosDAO  extends GenericDAO
         return medicos;
     }
     
-    public List<Medicos> getAllMedicosPorNome(String nome) throws SQLException 
+    public List<Medicos> getAllMedicosPorNome(Medicos nome) throws SQLException 
     {
         List<Medicos> medicos = new LinkedList<>();
         
